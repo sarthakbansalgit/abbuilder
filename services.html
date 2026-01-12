@@ -40,6 +40,13 @@
     <!-- AB Builders Initialization -->
     <script src="js/ab-builders-init.js"></script>
 
+    <!-- RS5.0 Main Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="revolution/css/settings.css">
+
+    <!-- RS5.0 Layers and Navigation Styles -->
+    <link rel="stylesheet" type="text/css" href="revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="revolution/css/navigation.css">
+
     <style>
         * {
             box-sizing: border-box !important;
@@ -176,8 +183,12 @@
             color: #ff6b35 !important;
             font-size: 24px !important;
             cursor: pointer !important;
-            padding: 0 !important;
-            margin-top: 15px !important;
+            padding: 10px !important;
+            margin-top: 10px !important;
+        }
+
+        #menu-btn:hover {
+            color: #f7931e !important;
         }
 
         footer {
@@ -247,9 +258,26 @@
             display: none !important;
         }
 
+        /* Force hide all old header elements */
+        .header-top {
+            display: none !important;
+        }
+
+        .top-bar {
+            display: none !important;
+        }
+
+        /* Override any style.css conflicts */
+        header nav ul li {
+            display: inline-block !important;
+        }
+
         @media (max-width: 992px) {
             #menu-btn {
-                display: block !important;
+                display: inline-block !important;
+                float: right !important;
+                margin-right: 20px !important;
+                margin-top: 20px !important;
             }
 
             nav {
@@ -258,6 +286,12 @@
                 clear: both !important;
                 display: none !important;
                 height: auto !important;
+                position: absolute !important;
+                top: 130px !important;
+                left: 0 !important;
+                background: #0a0e27 !important;
+                z-index: 998 !important;
+                border-bottom: 1px solid rgba(255, 107, 53, 0.2) !important;
             }
 
             nav.menu-open {
@@ -269,18 +303,26 @@
                 flex-direction: column !important;
                 height: auto !important;
                 background: #0a0e27 !important;
+                width: 100% !important;
             }
 
             #mainmenu li {
                 display: block !important;
                 width: 100% !important;
                 border-bottom: 1px solid rgba(255, 107, 53, 0.2) !important;
+                margin: 0 !important;
             }
 
             #mainmenu a {
                 padding: 15px 20px !important;
                 line-height: normal !important;
                 display: block !important;
+                color: #ccc !important;
+            }
+
+            #mainmenu a:hover {
+                background: rgba(255, 107, 53, 0.1) !important;
+                color: #ff6b35 !important;
             }
         }
 
@@ -289,6 +331,23 @@
                 display: block !important;
                 padding-right: 0 !important;
                 margin-bottom: 5px !important;
+                font-size: 11px !important;
+            }
+
+            header .info {
+                padding: 8px 0 !important;
+            }
+
+            #logo h2 {
+                font-size: 24px !important;
+            }
+
+            #logo p {
+                font-size: 10px !important;
+            }
+
+            nav {
+                top: 120px !important;
             }
 
             .subfooter .row {
@@ -298,6 +357,111 @@
             footer .social-icons {
                 text-align: center !important;
                 margin-top: 15px !important;
+            }
+
+            footer h3 {
+                font-size: 1.1em !important;
+            }
+        }
+
+        @media (max-width: 640px) {
+            header .info {
+                padding: 6px 0 !important;
+            }
+
+            header .info .col {
+                display: block !important;
+                font-size: 10px !important;
+                margin-bottom: 3px !important;
+            }
+
+            #logo {
+                height: 70px !important;
+                line-height: 70px !important;
+            }
+
+            #logo h2 {
+                font-size: 20px !important;
+                padding: 15px 0 !important;
+            }
+
+            #logo p {
+                font-size: 9px !important;
+            }
+
+            nav {
+                top: 110px !important;
+            }
+
+            #menu-btn {
+                margin-right: 10px !important;
+                margin-top: 15px !important;
+            }
+
+            footer {
+                padding: 40px 15px 15px !important;
+            }
+
+            footer h3 {
+                font-size: 1em !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header .info .col {
+                display: block !important;
+                font-size: 9px !important;
+                margin-bottom: 2px !important;
+                padding-right: 0 !important;
+            }
+
+            #logo {
+                height: 60px !important;
+                line-height: 60px !important;
+            }
+
+            #logo h2 {
+                font-size: 18px !important;
+                padding: 12px 0 !important;
+            }
+
+            #logo p {
+                font-size: 8px !important;
+                letter-spacing: 1px !important;
+            }
+
+            #menu-btn {
+                font-size: 20px !important;
+                padding: 8px !important;
+                margin-right: 8px !important;
+                margin-top: 12px !important;
+            }
+
+            nav {
+                top: 100px !important;
+            }
+
+            #mainmenu a {
+                padding: 12px 15px !important;
+                font-size: 12px !important;
+            }
+
+            footer {
+                padding: 30px 10px 10px !important;
+            }
+
+            footer h3 {
+                font-size: 0.95em !important;
+                margin-bottom: 15px !important;
+            }
+
+            footer p {
+                font-size: 13px !important;
+            }
+
+            footer .social-icons a {
+                margin-left: 10px !important;
+                font-size: 16px !important;
             }
         }
     </style>
@@ -341,7 +505,9 @@
                         <!-- logo close -->
 
                         <!-- small button begin -->
-                        <span id="menu-btn"></span>
+                        <span id="menu-btn" style="cursor: pointer; user-select: none;">
+                            <i class="fa fa-bars" style="font-size: 24px; color: #ff6b35;"></i>
+                        </span>
                         <!-- small button close -->
 
                         <!-- mainmenu begin -->
@@ -604,6 +770,27 @@
         document.querySelectorAll('#mainmenu a').forEach(link => {
             link.addEventListener('click', function() {
                 document.querySelector('nav').classList.remove('menu-open');
+            });
+        });
+
+        // Remove conflicting old header elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elementsToRemove = [
+                '.header-top',
+                '.top-bar',
+                '#lang-selector',
+                '#switcher',
+                '[class*="language"]',
+                '[class*="color-switcher"]'
+            ];
+            
+            elementsToRemove.forEach(selector => {
+                document.querySelectorAll(selector).forEach(el => {
+                    if (el && el !== document.querySelector('header')) {
+                        el.style.display = 'none';
+                        el.style.visibility = 'hidden';
+                    }
+                });
             });
         });
     </script>
