@@ -410,16 +410,3 @@ html {
     transition-property: all !important;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
-
-/* Disable transition for animations */
-@keyframes slideUp,
-@keyframes slideDown,
-@keyframes fadeIn,
-@keyframes scaleUp,
-@keyframes pulse,
-@keyframes glow,
-@keyframes slideRight {
-    * {
-        transition: none !important;
-    }
-}
