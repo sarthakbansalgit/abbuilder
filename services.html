@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="demo/demo.css" type="text/css">
     <link rel="icon" type="image/png/icon" href="images/favicon.png" alt="AB Builders Icon">
 
     <!-- custom background -->
@@ -41,44 +40,288 @@
     <!-- AB Builders Initialization -->
     <script src="js/ab-builders-init.js"></script>
 
+    <style>
+        * {
+            box-sizing: border-box !important;
+        }
+
+        html, body {
+            background: #0a0e27 !important;
+            color: #ccc !important;
+            font-family: Arial, sans-serif !important;
+            overflow-x: hidden !important;
+        }
+
+        /* Navbar Styling */
+        header {
+            width: 100% !important;
+            position: relative !important;
+            background: #0a0e27 !important;
+            z-index: 999 !important;
+            padding: 0 !important;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3) !important;
+        }
+
+        header .info {
+            background: rgba(0, 0, 0, 0.3) !important;
+            padding: 10px 0 !important;
+            border-bottom: 1px solid rgba(255, 107, 53, 0.2) !important;
+        }
+
+        header .info .col {
+            display: inline-block !important;
+            font-size: 12px !important;
+            color: #ccc !important;
+            padding-right: 30px !important;
+        }
+
+        header .info .col a {
+            color: #ff6b35 !important;
+            text-decoration: none !important;
+        }
+
+        header .info .col i {
+            color: #ff6b35 !important;
+            margin-right: 8px !important;
+        }
+
+        header .info .social i {
+            color: #ff6b35 !important;
+            font-size: 18px !important;
+            padding: 0 10px !important;
+        }
+
+        .id-color {
+            color: #ff6b35 !important;
+        }
+
+        #logo {
+            display: inline-block !important;
+            height: 80px !important;
+            float: left !important;
+            line-height: 80px !important;
+        }
+
+        #logo h2 {
+            margin: 0 !important;
+            padding: 20px 0 !important;
+            color: #ff6b35 !important;
+            font-size: 28px !important;
+            font-weight: 900 !important;
+        }
+
+        #logo p {
+            margin: 0 !important;
+            color: #f7931e !important;
+            font-size: 12px !important;
+            letter-spacing: 2px !important;
+        }
+
+        nav {
+            float: right !important;
+            display: inline-block !important;
+            height: 80px !important;
+        }
+
+        #mainmenu {
+            margin: 0 !important;
+            padding: 0 !important;
+            list-style: none !important;
+            float: right !important;
+            display: flex !important;
+            height: 80px !important;
+            align-items: center !important;
+        }
+
+        #mainmenu li {
+            display: inline-block !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            float: left !important;
+            position: relative !important;
+        }
+
+        #mainmenu a {
+            display: inline-block !important;
+            padding: 0 20px !important;
+            line-height: 80px !important;
+            color: #ccc !important;
+            text-decoration: none !important;
+            font-size: 13px !important;
+            transition: all 0.3s ease !important;
+        }
+
+        #mainmenu a:hover {
+            color: #ff6b35 !important;
+            background: rgba(255, 107, 53, 0.1) !important;
+        }
+
+        #mainmenu li:last-child a {
+            padding-right: 0 !important;
+        }
+
+        header .container {
+            padding: 0 20px !important;
+        }
+
+        header .row {
+            align-items: center !important;
+            min-height: 80px !important;
+        }
+
+        #menu-btn {
+            display: none !important;
+            background: transparent !important;
+            border: none !important;
+            color: #ff6b35 !important;
+            font-size: 24px !important;
+            cursor: pointer !important;
+            padding: 0 !important;
+            margin-top: 15px !important;
+        }
+
+        footer {
+            background: #0a0e27 !important;
+            border-top: 1px solid rgba(255, 107, 53, 0.2) !important;
+            padding: 60px 20px 20px !important;
+            color: #ccc !important;
+        }
+
+        footer h3 {
+            color: #ff6b35 !important;
+            font-size: 1.3em !important;
+            margin-bottom: 20px !important;
+            font-weight: 700 !important;
+        }
+
+        footer p {
+            color: #ccc !important;
+            line-height: 1.8 !important;
+            margin-bottom: 10px !important;
+        }
+
+        footer a {
+            color: #ff6b35 !important;
+            text-decoration: none !important;
+            transition: all 0.3s ease !important;
+        }
+
+        footer a:hover {
+            color: #f7931e !important;
+            text-decoration: underline !important;
+        }
+
+        .subfooter {
+            background: rgba(0, 0, 0, 0.3) !important;
+            border-top: 1px solid rgba(255, 107, 53, 0.2) !important;
+            padding: 20px !important;
+            text-align: center !important;
+            color: #aaa !important;
+            margin-top: 40px !important;
+        }
+
+        .subfooter a {
+            color: #ff6b35 !important;
+        }
+
+        .subfooter a:hover {
+            color: #f7931e !important;
+        }
+
+        footer .social-icons {
+            text-align: right !important;
+        }
+
+        footer .social-icons a {
+            display: inline-block !important;
+            margin-left: 15px !important;
+            font-size: 18px !important;
+        }
+
+        /* Hide language selector and demo switcher */
+        #lang-selector {
+            display: none !important;
+        }
+
+        #switcher {
+            display: none !important;
+        }
+
+        @media (max-width: 992px) {
+            #menu-btn {
+                display: block !important;
+            }
+
+            nav {
+                width: 100% !important;
+                float: none !important;
+                clear: both !important;
+                display: none !important;
+                height: auto !important;
+            }
+
+            nav.menu-open {
+                display: block !important;
+            }
+
+            #mainmenu {
+                display: block !important;
+                flex-direction: column !important;
+                height: auto !important;
+                background: #0a0e27 !important;
+            }
+
+            #mainmenu li {
+                display: block !important;
+                width: 100% !important;
+                border-bottom: 1px solid rgba(255, 107, 53, 0.2) !important;
+            }
+
+            #mainmenu a {
+                padding: 15px 20px !important;
+                line-height: normal !important;
+                display: block !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header .info .col {
+                display: block !important;
+                padding-right: 0 !important;
+                margin-bottom: 5px !important;
+            }
+
+            .subfooter .row {
+                display: block !important;
+            }
+
+            footer .social-icons {
+                text-align: center !important;
+                margin-top: 15px !important;
+            }
+        }
+    </style>
 </head>
 
 <body class="page-services">
 
     <div id="wrapper">
+
         <!-- header begin -->
         <header>
             <div class="info">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8">
-                            <div class="col"><span class="id-color"><i class="fa fa-map-marker"></i></span>Talli Bamori, Mukhani, Opp. Khatu Shyam Mandir, Durga Colony, Ward Number 25, Azad Nagar, Heera Nagar, Haldwani, Uttarakhand 263139 </div>
+                            <div class="col"><span class="id-color"><i class="fa fa-map-marker"></i></span>Haldwani, Uttarakhand 263139</div>
                             <div class="col"><span class="id-color"><i class="fa fa-clock-o"></i></span>Monday - Friday 08:00-16:00</div>
-                            <div class="col"><span class="id-color"><i class="fa fa-phone"></i></span>
-                                <style>
-                                    #link {
-                                        color: #ffffff;
-                                    }
-                                    /* CSS link color */
-                                </style><a id="link" href="tel:+91 8630889787">+91 9719402631</a></div>
-                            <div class="col">
-                                <div id="lang-selector" class="dropdown">
-                                    <a href="#" class="btn-selector">English</a>
-                                    <ul>
-                                        <li class="active"><a href="#">English</a></li>
-                                        <li><a href="#">French</a></li>
-                                        <li><a href="#">Germany</a></li>
-                                        <li><a href="#">Spanish</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
+                            <div class="col"><span class="id-color"><i class="fa fa-phone"></i></span><a href="tel:+918630889787" style="color: #ff6b35;">+91 8630-889787</a></div>
                         </div>
                         <div class="col-md-4 text-right">
                             <!-- social icons -->
-                            <div class="col social">
-                                <a href="https://wa.me/+91 8630889787"><i class="fa fa-whatsapp"></i></a>
-                                </div>
+                            <div class="social">
+                                <a href="https://wa.me/+918630889787" title="WhatsApp"><i class="fa fa-whatsapp"></i></a>
+                            </div>
                             <!-- social icons close -->
                         </div>
                     </div>
@@ -90,7 +333,7 @@
                     <div class="col-md-12">
                         <!-- logo begin -->
                         <div id="logo">
-                                                        <a href="index.html" class="gradient-text">
+                            <a href="index.html" class="gradient-text">
                                 <h2 style="font-size: 28px; font-weight: 900; margin: 0; color: #ff6b35;">AB BUILDERS</h2>
                                 <p style="font-size: 12px; margin: 0; letter-spacing: 2px; color: #f7931e;">PREMIUM CONSTRUCTION</p>
                             </a>
@@ -112,32 +355,15 @@
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </nav>
+                        <!-- mainmenu close -->
 
                     </div>
-                    <!-- mainmenu close -->
-
                 </div>
             </div>
         </header>
         <!-- header close -->
 
-        <!-- subheader -->
-        <section id="subheader" data-stellar-background-ratio=".3">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h1>Services</h1>
-                        <div class="small-border-deco"><span></span></div>
-                        <ul class="crumb">
-                            <li><a href="index.html">Home</a></li>
-                            <li class="sep"></li>
-                            <li>Services</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- subheader close -->
+
 
         <!-- content begin -->
         <div id="content" class="no-bottom">
@@ -291,32 +517,24 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <br>
+                        <h3>About AB Builders</h3>
+                        <p>We deliver premium construction solutions with expertise in residential, commercial, and civil projects. Building excellence, one project at a time.</p>
                     </div>
 
                     <div class="col-md-4">
-                        <div class="widget widget_recent_post">
-                            <h3>Latest News</h3>
-                            <ul>
-                                <li><a href="#">5 Things That Take a Room from Good to Great</a></li>
-                                <li><a href="#">Functional and Stylish Wall-to-Wall Shelves</a></li>
-                                <li><a href="#">9 Unique and Unusual Ways to Display Your TV</a></li>
-                                <li><a href="#">The 5 Secrets to Pulling Off Simple, Minimal Design</a></li>
-                                <li><a href="#">How to Make a Huge Impact With Multiples</a></li>
-                            </ul>
-                        </div>
+                        <h3>Latest News</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="#">New Construction Techniques</a></li>
+                            <li><a href="#">Sustainable Building Practices</a></li>
+                            <li><a href="#">Project Showcase 2025</a></li>
+                        </ul>
                     </div>
 
                     <div class="col-md-4">
-                        <h3>Contact Us</h3>
-                        <div class="widget widget-address">
-                            <address>
-                                <span>Talli Bamori, Mukhani, Opp. Khatu Shyam Mandir, Durga Colony, Ward Number 25, Azad Nagar, Heera Nagar, Haldwani, Uttarakhand 263139 </span>
-                                <span><strong>Phone:</strong>+91 8630889787</span>
-                                <span><strong>Email:</strong><a href="mailto:info@abbuilders.com">info@abbuilders.com</a></span>
-                                <span><strong>Web:</strong><a href="https://www.abbuilders.com">https://www.abbuilders.com</a></span>
-                            </address>
-                        </div>
+                        <h3>Quick Contact</h3>
+                        <p><strong>Phone:</strong> <a href="tel:+918630889787">+91 86308-89787</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:info@abbuilders.com">info@abbuilders.com</a></p>
+                        <p><strong>Address:</strong> Haldwani, Uttarakhand 263139</p>
                     </div>
                 </div>
             </div>
@@ -325,75 +543,26 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
-                            &copy; All Rights Reserved. Copyright AB Builders 2021
+                            &copy; All Rights Reserved. Copyright <strong>AB Builders</strong> 2025 | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
                         </div>
                         <div class="col-md-6 text-right">
                             <div class="social-icons">
-                                <a href="https://wa.me/+91 8630889787"><i class="fa fa-whatsapp"></i></a>
-                                </div>
+                                <span>Follow us:</span>
+                                <a href="https://wa.me/+918630889787" title="WhatsApp"><i class="fa fa-whatsapp"></i></a>
+                                <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+                                <a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <a href="#" id="back-to-top"></a>
         </footer>
         <!-- footer close -->
 
         <a href="#" id="back-to-top"></a>
     </div>
 
-    <!-- style switcher
-    ================================================== -->
 
-
-    <div id="switcher">
-        <span class="custom-close"></span>
-        <span class="custom-show"></span>
-
-        <span class="sw-title">Header Style</span>
-        <select name="switcher" id="de-header-style">
-            <option value="opt-1">Solid</option>
-            <option value="opt-2" selected>Transparent</option>
-        </select>
-
-        <div class="clearfix"></div>
-
-        <span class="sw-title">Header Layout</span>
-        <select name="switcher" id="de-header-layout">
-            <option value="opt-1">Simple</option>
-            <option value="opt-2" selected>Extended</option>
-        </select>
-
-        <div class="clearfix"></div>
-
-        <span class="sw-title">Menu Style</span>
-        <select name="switcher" id="de-menu">
-            <option value="opt-1">Dotted Separator</option>
-            <option value="opt-2">Line Separator</option>
-            <option value="opt-3">Circle Separator</option>
-            <option value="opt-4">Square Separator</option>
-            <option value="opt-5">Plus Separator</option>
-            <option value="opt-6">Strip Separator</option>
-            <option value="opt-0" selected>No Separator</option>
-        </select>
-
-        <div class="clearfix"></div>
-
-        <span class="sw-title">Color :</span>
-        <ul id="de-color">
-            <li class="bg1"></li>
-            <li class="bg2"></li>
-            <li class="bg3"></li>
-            <li class="bg4"></li>
-            <li class="bg5"></li>
-            <li class="bg6"></li>
-            <li class="bg7"></li>
-            <li class="bg8"></li>
-            <li class="bg9"></li>
-            <li class="bg10"></li>
-        </ul>
-    </div>
 
     <!-- Javascript Files
     ================================================== -->
@@ -410,7 +579,6 @@
     <script src="js/enquire.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
     <script src="js/designesia.js"></script>
-    <script src="demo/demo.js"></script>
 
     <!-- RS5.0 Core JS Files -->
     <script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min838f.js?rev=5.0"></script>
@@ -426,8 +594,21 @@
     <script type="text/javascript" src="revolution/js/extensions/revolution.extension.migration.min.js"></script>
     <script type="text/javascript" src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
 
-</body>
+    <script>
+        // Menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('menu-open');
+        });
 
-<!-- Mirrored from www.designesia.com/themes/buildpro/services.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Jan 2021 15:58:04 GMT -->
+        // Close menu when link is clicked
+        document.querySelectorAll('#mainmenu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('nav').classList.remove('menu-open');
+            });
+        });
+    </script>
+
+</body>
 
 </html>
