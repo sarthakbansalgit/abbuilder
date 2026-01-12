@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AB Builders">
+    <meta name="keywords" content="abbuilders.com, AB Builders Construction, AB BuildersKe, AB Builders, AB Builders Kenya, Bernard Mosiere">
+    <meta name="author" content="AB Builders">
+
+
+    <!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<![endif]-->
+
+
+    <!-- CSS Files
+    ================================================== -->
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/jpreloader.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="demo/demo.css" type="text/css">
+    <link rel="icon" type="image/png/icon" href="images/favicon.png" alt="AB Builders Icon">
+
+    <!-- custom background -->
+    <link rel="stylesheet" href="css/bg.css" type="text/css">
+
+    <!-- color scheme -->
+    <link rel="stylesheet" href="css/color.css" type="text/css" id="colors">
+    <!-- Enhanced Animations -->
+    <link rel="stylesheet" href="css/animations-enhanced.css" type="text/css">
+    
+    <!-- AB Builders Custom Styles -->
+    <link rel="stylesheet" href="css/ab-builders-custom.css" type="text/css">
+    
+    <!-- AB Builders Initialization -->
+    <script src="js/ab-builders-init.js"></script>
+
+    <!-- RS5.0 Main Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="revolution/css/settings.css">
+
+    <!-- RS5.0 Layers and Navigation Styles -->
+    <link rel="stylesheet" type="text/css" href="revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="revolution/css/navigation.css">
+</head>
+
+<body class="page-projects">
+
+    <div id="wrapper">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- logo begin -->
+                        <div id="logo">
+                                                        <a href="index.html" class="gradient-text">
+                                <h2 style="font-size: 28px; font-weight: 900; margin: 0; color: #ff6b35;">AB BUILDERS</h2>
+                                <p style="font-size: 12px; margin: 0; letter-spacing: 2px; color: #f7931e;">PREMIUM CONSTRUCTION</p>
+                            </a>
+                        </div>
+                        <!-- logo close -->
+
+                        <!-- small button begin -->
+                        <span id="menu-btn"></span>
+                        <!-- small button close -->
+
+                        <!-- mainmenu begin -->
+                        <nav>
+                            <ul id="mainmenu">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                    <!-- mainmenu close -->
+
+                </div>
+            </div>
+        </header>
+        <!-- header close -->
+
+        <!-- subheader -->
+        <section id="subheader" data-stellar-background-ratio=".3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Projects</h1>
+                        <div class="small-border-deco"><span></span></div>
+                        <ul class="crumb">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="sep"></li>
+                            <li>Projects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- subheader close -->
+
+        <!-- Projects Gallery Section -->
+        <section style="padding: 80px 0; background: #0a0e27;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 60px; padding: 0 15px;">
+                    <h2 style="font-size: 2.8em; color: #ff6b35; margin-bottom: 20px; line-height: 1.2;">Our Projects</h2>
+                    <p style="font-size: 1.1em; color: #ccc; max-width: 600px; margin: 0 auto; line-height: 1.6;">Showcasing our latest residential and commercial construction projects with premium quality and modern design</p>
+                </div>
+
+                <style>
+                    .projects-grid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                        gap: 30px;
+                        padding: 0 20px;
+                    }
+
+                    .project-card {
+                        position: relative;
+                        overflow: hidden;
+                        border-radius: 12px;
+                        height: 380px;
+                        cursor: pointer;
+                        animation: slideInUp 0.8s ease-out both;
+                        box-shadow: 0 10px 40px rgba(255, 107, 53, 0.2);
+                    }
+
+                    .project-card:nth-child(1) { animation-delay: 0.1s; }
+                    .project-card:nth-child(2) { animation-delay: 0.2s; }
+                    .project-card:nth-child(3) { animation-delay: 0.3s; }
+                    .project-card:nth-child(4) { animation-delay: 0.4s; }
+
+                    @keyframes slideInUp {
+                        from {
+                            opacity: 0;
+                            transform: translateY(40px);
+                        }
+                        to {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+
+                    .project-card img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+                        display: block;
+                    }
+
+                    .project-card:hover img {
+                        transform: scale(1.12) rotate(1deg);
+                    }
+
+                    .project-overlay {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(135deg, rgba(255, 107, 53, 0.92), rgba(247, 147, 30, 0.88));
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: flex-end;
+                        padding: 30px;
+                        opacity: 0;
+                        transition: opacity 0.4s ease-in-out, backdrop-filter 0.4s;
+                        backdrop-filter: blur(0px);
+                    }
+
+                    .project-card:hover .project-overlay {
+                        opacity: 1;
+                        backdrop-filter: blur(3px);
+                    }
+
+                    .project-title {
+                        font-size: 1.6em;
+                        font-weight: 700;
+                        color: white;
+                        text-align: center;
+                        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+                        letter-spacing: 1px;
+                    }
+
+                    .project-type {
+                        font-size: 0.9em;
+                        color: rgba(255, 255, 255, 0.85);
+                        margin-top: 10px;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                    }
+
+                    /* Mobile Responsive Design */
+                    @media (max-width: 1024px) {
+                        .projects-grid {
+                            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                            gap: 25px;
+                            padding: 0 15px;
+                        }
+
+                        .project-card {
+                            height: 320px;
+                        }
+
+                        .project-title {
+                            font-size: 1.4em;
+                        }
+
+                        .project-type {
+                            font-size: 0.8em;
+                        }
+                    }
+
+                    @media (max-width: 768px) {
+                        .projects-grid {
+                            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                            gap: 20px;
+                            padding: 0 10px;
+                        }
+
+                        .project-card {
+                            height: 280px;
+                        }
+
+                        .project-overlay {
+                            padding: 20px;
+                        }
+
+                        .project-title {
+                            font-size: 1.2em;
+                        }
+
+                        .project-type {
+                            font-size: 0.75em;
+                        }
+                    }
+
+                    @media (max-width: 640px) {
+                        .projects-grid {
+                            grid-template-columns: 1fr;
+                            gap: 15px;
+                            padding: 0;
+                        }
+
+                        .project-card {
+                            height: 250px;
+                        }
+
+                        .project-overlay {
+                            padding: 15px;
+                        }
+
+                        .project-title {
+                            font-size: 1.1em;
+                        }
+
+                        .project-type {
+                            font-size: 0.7em;
+                            margin-top: 5px;
+                        }
+
+                        .project-card:hover img {
+                            transform: scale(1.08) rotate(0.5deg);
+                        }
+                    }
+
+                    @media (max-width: 480px) {
+                        .projects-grid {
+                            padding: 0 5px;
+                        }
+
+                        .project-card {
+                            height: 220px;
+                            border-radius: 8px;
+                        }
+
+                        .project-overlay {
+                            padding: 12px;
+                        }
+
+                        .project-title {
+                            font-size: 0.95em;
+                        }
+
+                        .project-type {
+                            font-size: 0.65em;
+                        }
+                    }
+
+                    /* Contact Section Mobile Styles */
+                    @media (max-width: 768px) {
+                        section.dark-bg {
+                            padding: 40px 20px !important;
+                        }
+
+                        section.dark-bg h2 {
+                            font-size: 2em !important;
+                            margin-bottom: 15px !important;
+                        }
+
+                        section.dark-bg h4 {
+                            font-size: 1.4em !important;
+                            margin-bottom: 20px !important;
+                        }
+
+                        section.dark-bg p {
+                            font-size: 0.95em !important;
+                        }
+
+                        .btn-big {
+                            padding: 14px 30px !important;
+                            font-size: 0.95em !important;
+                        }
+                    }
+
+                    @media (max-width: 480px) {
+                        section.dark-bg {
+                            padding: 30px 15px !important;
+                        }
+
+                        section.dark-bg h2 {
+                            font-size: 1.6em !important;
+                            margin-bottom: 12px !important;
+                        }
+
+                        section.dark-bg h4 {
+                            font-size: 1.1em !important;
+                            margin-bottom: 15px !important;
+                        }
+
+                        section.dark-bg p {
+                            font-size: 0.85em !important;
+                            margin-bottom: 25px !important;
+                        }
+
+                        .btn-big {
+                            padding: 12px 25px !important;
+                            font-size: 0.85em !important;
+                        }
+
+                        div[style*="display: flex"] {
+                            gap: 12px !important;
+                        }
+                    }
+                </style>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <img src="images/portfolio/r1.jpeg" alt="Modern Residential Design">
+                        <div class="project-overlay">
+                            <div class="project-title">Modern Residential</div>
+                            <div class="project-type">Residential</div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <img src="images/portfolio/r2.jpeg" alt="Contemporary Design">
+                        <div class="project-overlay">
+                            <div class="project-title">Contemporary Build</div>
+                            <div class="project-type">Commercial</div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <img src="images/portfolio/r3.jpeg" alt="Luxury Property">
+                        <div class="project-overlay">
+                            <div class="project-title">Luxury Estate</div>
+                            <div class="project-type">Premium</div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card">
+                        <img src="images/portfolio/pf%20(1).jpg" alt="Modern Interior Design">
+                        <div class="project-overlay">
+                            <div class="project-title">Modern Interior</div>
+                            <div class="project-type">Residential</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Anuj Bansal Contact Section -->
+            <section class="dark-bg pt80 pb80" style="padding: 60px 20px;">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-8 offset-md-2 text-center" style="padding: 0 15px;">
+                            <h2 style="font-size: 2.5em; margin-bottom: 20px; color: #ff6b35; line-height: 1.2;">Get In Touch With Our Expert</h2>
+                            <h4 style="font-size: 1.8em; margin-bottom: 30px; color: #fff; font-weight: 300; line-height: 1.3;">Contact <strong style="color: #f7931e;">Anuj Bansal</strong></h4>
+                            <p style="font-size: 1.1em; color: #ccc; margin-bottom: 40px; line-height: 1.8;">For all further details about our construction projects, designs, and services, reach out to our dedicated consultant. We're here to help you build your dream home or commercial space.</p>
+                            
+                            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 30px;">
+                                <a href="tel:+919719402631" class="btn btn-big" style="background: linear-gradient(90deg, #ff6b35, #f7931e); padding: 18px 40px; font-size: 1.1em; border-radius: 50px; display: inline-block; text-decoration: none; color: white; transition: all 0.4s ease; white-space: nowrap;">
+                                    <i class="fa fa-phone"></i> Call Now
+                                </a>
+                                <a href="https://wa.me/918630889787?text=Hello%20Anuj!%20I%20am%20interested%20in%20your%20construction%20services.%20Please%20provide%20more%20details." target="_blank" class="btn btn-big" style="background: linear-gradient(90deg, #25d366, #20ba5a); padding: 18px 40px; font-size: 1.1em; border-radius: 50px; display: inline-block; text-decoration: none; color: white; transition: all 0.4s ease; white-space: nowrap;">
+                                    <i class="fa fa-whatsapp"></i> WhatsApp
+                                </a>
+                            </div>
+
+                            <div style="margin-top: 50px; padding-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                                <p style="color: #aaa; font-size: 0.95em;">
+                                    <span style="color: #ff6b35;"><i class="fa fa-map-marker"></i></span> Talli Bamori, Mukhani, Haldwani, Uttarakhand 263139<br>
+                                    <span style="color: #ff6b35;"><i class="fa fa-phone"></i></span> +91 9719402631 | +91 8630889787<br>
+                                    <span style="color: #ff6b35;"><i class="fa fa-envelope"></i></span> <a href="mailto:info@abbuilders.com" style="color: #ff6b35; text-decoration: none;">info@abbuilders.com</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Contact Section Close -->
+
+        </div>
+
+        <a href="#" id="back-to-top"></a>
+    </div>
+
+    <!-- style switcher
+    ================================================== -->
+
+
+    <div id="switcher">
+        <span class="custom-close"></span>
+        <span class="custom-show"></span>
+
+        <span class="sw-title">Header Style</span>
+        <select name="switcher" id="de-header-style">
+            <option value="opt-1">Solid</option>
+            <option value="opt-2" selected>Transparent</option>
+        </select>
+
+        <div class="clearfix"></div>
+
+        <span class="sw-title">Header Layout</span>
+        <select name="switcher" id="de-header-layout">
+            <option value="opt-1">Simple</option>
+            <option value="opt-2" selected>Extended</option>
+        </select>
+
+        <div class="clearfix"></div>
+
+        <span class="sw-title">Menu Style</span>
+        <select name="switcher" id="de-menu">
+            <option value="opt-1">Dotted Separator</option>
+            <option value="opt-2">Line Separator</option>
+            <option value="opt-3">Circle Separator</option>
+            <option value="opt-4">Square Separator</option>
+            <option value="opt-5">Plus Separator</option>
+            <option value="opt-6">Strip Separator</option>
+            <option value="opt-0" selected>No Separator</option>
+        </select>
+
+        <div class="clearfix"></div>
+
+        <span class="sw-title">Color :</span>
+        <ul id="de-color">
+            <li class="bg1"></li>
+            <li class="bg2"></li>
+            <li class="bg3"></li>
+            <li class="bg4"></li>
+            <li class="bg5"></li>
+            <li class="bg6"></li>
+            <li class="bg7"></li>
+            <li class="bg8"></li>
+            <li class="bg9"></li>
+            <li class="bg10"></li>
+        </ul>
+    </div>
+
+    <!-- Javascript Files
+    ================================================== -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jpreLoader.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/enquire.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/designesia.js"></script>
+    <script src="demo/demo.js"></script>
+
+    <!-- RS5.0 Core JS Files -->
+    <script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min838f.js?rev=5.0"></script>
+    <script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min838f.js?rev=5.0"></script>
+
+    <!-- RS5.0 Extensions Files -->
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+
+</body>
+
+<!-- Mirrored from www.designesia.com/themes/buildpro/projects.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Jan 2021 15:57:47 GMT -->
+
+</html>

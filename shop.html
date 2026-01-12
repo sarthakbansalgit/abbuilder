@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Shop - Coming Soon | A.B. Builders</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A.B. Builders Shop - Coming Soon">
+    <meta name="author" content="A.B. Builders">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/color.css" type="text/css" id="colors">
+    <link rel="stylesheet" href="css/animations-enhanced.css" type="text/css">
+    <link rel="stylesheet" href="css/ab-builders-custom.css" type="text/css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css">
+    <script src="js/ab-builders-init.js"></script>
+
+    <style>
+        html { background: #0a0e27 !important; }
+        body {
+            display: block !important;
+            visibility: visible !important;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%) !important;
+            min-height: 100vh;
+            color: #fff;
+        }
+        #wrapper { display: block !important; }
+        .page-shop { background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%); }
+        
+        .coming-soon-container {
+            text-align: center;
+            padding: 120px 20px;
+            position: relative;
+            z-index: 10;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .coming-soon-content {
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .coming-soon-content h1 {
+            font-size: 4.5rem;
+            font-weight: 900;
+            color: #ff6b35;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            animation: slideInDown 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+            text-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+        }
+
+        .coming-soon-content h2 {
+            font-size: 2rem;
+            color: #f7931e;
+            margin-bottom: 20px;
+            animation: slideInUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;
+        }
+
+        .coming-soon-content p {
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            animation: fadeIn 1s ease-out 0.4s both;
+        }
+
+        .coming-soon-icon {
+            font-size: 120px;
+            margin-bottom: 30px;
+            color: #ff6b35;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-30px); }
+        }
+
+        @keyframes slideInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .coming-soon-timer {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+
+        .timer-box {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.15) 0%, rgba(247, 147, 30, 0.1) 100%);
+            border: 2px solid #ff6b35;
+            border-radius: 15px;
+            padding: 25px 35px;
+            min-width: 120px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .timer-box:hover {
+            transform: translateY(-10px) scale(1.05);
+            border-color: #f7931e;
+            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.3);
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.2) 0%, rgba(247, 147, 30, 0.15) 100%);
+        }
+
+        .timer-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.6s;
+        }
+
+        .timer-box:hover::before { left: 100%; }
+
+        .timer-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #ff6b35;
+            display: block;
+            margin-bottom: 8px;
+            animation: counterPulse 1s ease-in-out infinite;
+        }
+
+        @keyframes counterPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); color: #f7931e; }
+        }
+
+        .timer-label {
+            font-size: 0.9rem;
+            color: #ddd;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .newsletter-form {
+            margin-top: 40px;
+            animation: fadeIn 1s ease-out 0.8s both;
+        }
+
+        .newsletter-form input {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #ff6b35;
+            color: #ffffff;
+            padding: 15px 20px;
+            font-size: 1rem;
+            border-radius: 50px;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 15px;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .newsletter-form input::placeholder { color: rgba(255, 255, 255, 0.5); }
+        .newsletter-form input:focus {
+            outline: none;
+            background: rgba(255, 107, 53, 0.1);
+            border-color: #f7931e;
+            box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .newsletter-form button {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            border: none;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1rem;
+            border-radius: 50px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .newsletter-form button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s;
+        }
+
+        .newsletter-form button:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(255, 107, 53, 0.4);
+        }
+
+        .newsletter-form button:hover::before { left: 100%; }
+
+        .social-links {
+            margin-top: 40px;
+            animation: fadeIn 1s ease-out 1s both;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            width: 50px;
+            height: 50px;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 107, 53, 0.15);
+            border: 2px solid #ff6b35;
+            color: #ff6b35;
+            border-radius: 50%;
+            margin: 0 10px;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            border-color: #f7931e;
+            color: white;
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 15px 30px rgba(255, 107, 53, 0.4);
+        }
+
+        .back-link {
+            margin-top: 40px;
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+
+        .back-link a {
+            color: #ff6b35;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .back-link a:hover {
+            color: #f7931e;
+            text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 1024px) {
+            .coming-soon-content h1 {
+                font-size: 3.5rem;
+            }
+
+            .coming-soon-content h2 {
+                font-size: 1.7rem;
+            }
+
+            .coming-soon-content p {
+                font-size: 1.1rem;
+            }
+
+            .coming-soon-icon {
+                font-size: 100px;
+            }
+
+            .timer-box {
+                padding: 20px 30px;
+                min-width: 100px;
+            }
+
+            .timer-number {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .coming-soon-container {
+                padding: 80px 15px;
+                min-height: auto;
+            }
+
+            .coming-soon-content h1 {
+                font-size: 2.5rem;
+                margin-bottom: 15px;
+            }
+
+            .coming-soon-content h2 {
+                font-size: 1.3rem;
+            }
+
+            .coming-soon-content p {
+                font-size: 1rem;
+                margin-bottom: 25px;
+            }
+
+            .coming-soon-icon {
+                font-size: 80px;
+                margin-bottom: 20px;
+            }
+
+            .coming-soon-timer {
+                gap: 15px;
+                margin: 30px 0;
+            }
+
+            .timer-box {
+                padding: 18px 25px;
+                min-width: 90px;
+            }
+
+            .timer-number {
+                font-size: 1.8rem;
+                margin-bottom: 5px;
+            }
+
+            .timer-label {
+                font-size: 0.75rem;
+                letter-spacing: 0.5px;
+            }
+
+            .newsletter-form input {
+                padding: 12px 15px;
+                font-size: 0.95rem;
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .newsletter-form button {
+                padding: 12px 30px;
+                font-size: 0.95rem;
+            }
+
+            .social-links {
+                margin-top: 30px;
+            }
+
+            .social-links a {
+                width: 45px;
+                height: 45px;
+                margin: 0 8px;
+                font-size: 1rem;
+            }
+
+            .back-link {
+                margin-top: 30px;
+            }
+
+            .back-link a {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .coming-soon-container {
+                padding: 60px 12px;
+            }
+
+            .coming-soon-content h1 {
+                font-size: 2rem;
+                margin-bottom: 12px;
+                letter-spacing: 1px;
+            }
+
+            .coming-soon-content h2 {
+                font-size: 1.1rem;
+                margin-bottom: 15px;
+            }
+
+            .coming-soon-content p {
+                font-size: 0.95rem;
+                margin-bottom: 20px;
+                line-height: 1.6;
+            }
+
+            .coming-soon-icon {
+                font-size: 70px;
+                margin-bottom: 15px;
+            }
+
+            .coming-soon-timer {
+                gap: 10px;
+                margin: 25px 0;
+            }
+
+            .timer-box {
+                padding: 15px 20px;
+                min-width: 80px;
+                border-radius: 10px;
+            }
+
+            .timer-number {
+                font-size: 1.5rem;
+                margin-bottom: 4px;
+            }
+
+            .timer-label {
+                font-size: 0.7rem;
+                letter-spacing: 0px;
+            }
+
+            .newsletter-form {
+                margin-top: 25px;
+            }
+
+            .newsletter-form input {
+                padding: 10px 12px;
+                font-size: 0.9rem;
+                margin-bottom: 10px;
+                max-width: 100%;
+            }
+
+            .newsletter-form button {
+                padding: 10px 25px;
+                font-size: 0.9rem;
+                letter-spacing: 0.5px;
+            }
+
+            .social-links {
+                margin-top: 20px;
+            }
+
+            .social-links a {
+                width: 40px;
+                height: 40px;
+                margin: 0 6px;
+                font-size: 0.9rem;
+            }
+
+            .back-link {
+                margin-top: 20px;
+            }
+
+            .back-link a {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .coming-soon-container {
+                padding: 50px 10px;
+            }
+
+            .coming-soon-content h1 {
+                font-size: 1.7rem;
+                margin-bottom: 10px;
+                letter-spacing: 0.5px;
+            }
+
+            .coming-soon-content h2 {
+                font-size: 0.95rem;
+                margin-bottom: 12px;
+            }
+
+            .coming-soon-content p {
+                font-size: 0.9rem;
+                margin-bottom: 18px;
+            }
+
+            .coming-soon-icon {
+                font-size: 60px;
+                margin-bottom: 12px;
+            }
+
+            .coming-soon-timer {
+                gap: 8px;
+                margin: 20px 0;
+            }
+
+            .timer-box {
+                padding: 12px 15px;
+                min-width: 70px;
+                border-radius: 8px;
+                border-width: 1px;
+            }
+
+            .timer-number {
+                font-size: 1.3rem;
+                margin-bottom: 3px;
+            }
+
+            .timer-label {
+                font-size: 0.65rem;
+            }
+
+            .newsletter-form {
+                margin-top: 20px;
+            }
+
+            .newsletter-form input {
+                padding: 9px 10px;
+                font-size: 0.85rem;
+                margin-bottom: 8px;
+            }
+
+            .newsletter-form button {
+                padding: 9px 20px;
+                font-size: 0.85rem;
+            }
+
+            .social-links {
+                margin-top: 15px;
+            }
+
+            .social-links a {
+                width: 38px;
+                height: 38px;
+                margin: 0 5px;
+                font-size: 0.85rem;
+            }
+
+            .back-link {
+                margin-top: 15px;
+            }
+
+            .back-link a {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="page-shop">
+
+    <div id="wrapper">
+        <!-- header begin -->
+        <header>
+            <div class="info">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="col"><span class="id-color"><i class="fa fa-map-marker"></i></span>Talli Bamori, Mukhani, Opp. Khatu Shyam Mandir, Durga Colony, Ward Number 25, Azad Nagar, Heera Nagar, Haldwani, Uttarakhand 263139 </div>
+                            <div class="col"><span class="id-color"><i class="fa fa-clock-o"></i></span>Monday - Friday 08:00-16:00</div>
+                            <div class="col"><span class="id-color"><i class="fa fa-phone"></i></span><a id="link" href="tel:+91 9719402631">+91 9719402631</a></div>
+                            <div class="col">
+                                <div id="lang-selector" class="dropdown">
+                                    <a href="#" class="btn-selector">English</a>
+                                    <ul>
+                                        <li class="active"><a href="#">English</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-right">
+                            <div class="col social">
+                                <a href="https://wa.me/+91 8630889787"><i class="fa fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="logo">
+                            <a href="index.html" class="gradient-text">
+                                <h2 style="font-size: 28px; font-weight: 900; margin: 0; color: #ff6b35; letter-spacing: 4px;">A.B. BUILDERS</h2>
+                                <p style="font-size: 12px; margin: 0; letter-spacing: 2px; color: #f7931e;">PREMIUM CONSTRUCTION SOLUTIONS</p>
+                            </a>
+                        </div>
+
+                        <span id="menu-btn"></span>
+
+                        <nav>
+                            <ul id="mainmenu">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="coming-soon-container">
+            <div class="coming-soon-content">
+                <div class="coming-soon-icon">🏪</div>
+
+                <h1>Coming Soon</h1>
+                <h2>A.B. Builders Shop</h2>
+
+                <p>We're preparing something amazing for you! Our premium construction products and services store will be launching very soon.</p>
+
+                <div class="coming-soon-timer">
+                    <div class="timer-box">
+                        <span class="timer-number" id="days">0</span>
+                        <span class="timer-label">Days</span>
+                    </div>
+                    <div class="timer-box">
+                        <span class="timer-number" id="hours">0</span>
+                        <span class="timer-label">Hours</span>
+                    </div>
+                    <div class="timer-box">
+                        <span class="timer-number" id="minutes">0</span>
+                        <span class="timer-label">Minutes</span>
+                    </div>
+                    <div class="timer-box">
+                        <span class="timer-number" id="seconds">0</span>
+                        <span class="timer-label">Seconds</span>
+                    </div>
+                </div>
+
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email to get notified" id="emailInput">
+                    <button onclick="subscribeNewsletter()">Notify Me</button>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/abbuilders" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.twitter.com/ABBuilders" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/ABBuilders" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a>
+                    <a href="https://wa.me/+918630889787" target="_blank" title="WhatsApp"><i class="fa fa-whatsapp"></i></a>
+                </div>
+
+                <div class="back-link">
+                    <a href="index.html">← Back to Home</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <br>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h3>Quick Links</h3>
+                        <ul style="color: #ccc;">
+                            <li><a href="index.html" style="color: #ccc; text-decoration: none;">Home</a></li>
+                            <li><a href="projects.html" style="color: #ccc; text-decoration: none;">Projects</a></li>
+                            <li><a href="services.html" style="color: #ccc; text-decoration: none;">Services</a></li>
+                            <li><a href="contact.html" style="color: #ccc; text-decoration: none;">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h3>Contact Us</h3>
+                        <div class="widget widget-address">
+                            <address style="color: #ccc;">
+                                <span>Premium Construction & Engineering Services</span>
+                                <span><strong>Phone:</strong>+91 9719402631 | +91 8630889787</span>
+                                <span><strong>Email:</strong><a href="mailto:info@abbuilders.com" style="color: #ff6b35; text-decoration: none;">info@abbuilders.com</a></span>
+                                <span><strong>Website:</strong><a href="https://www.abbuilders.com" style="color: #ff6b35; text-decoration: none;">https://www.abbuilders.com</a></span>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subfooter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            &copy; All Rights Reserved. Copyright AB Builders 2024 | Premium Construction Solutions
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <div class="social-icons">
+                                <a href="https://wa.me/+91 8630889787"><i class="fa fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <a href="#" id="back-to-top"></a>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/designesia.js"></script>
+    <script>
+        function updateCountdown() {
+            const targetDate = new Date('2026-06-01').getTime();
+            
+            const interval = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = hours;
+                document.getElementById('minutes').textContent = minutes;
+                document.getElementById('seconds').textContent = seconds;
+
+                if (distance < 0) {
+                    clearInterval(interval);
+                    document.querySelector('.coming-soon-timer').innerHTML = '<h2 style="color: #ff6b35; font-size: 2rem;">We\'re Live Now!</h2>';
+                }
+            }, 1000);
+        }
+
+        function subscribeNewsletter() {
+            const email = document.getElementById('emailInput').value;
+            if (email && email.includes('@')) {
+                alert('Thank you for subscribing! We\'ll notify you when we launch.');
+                document.getElementById('emailInput').value = '';
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCountdown();
+            document.getElementById('emailInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') subscribeNewsletter();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

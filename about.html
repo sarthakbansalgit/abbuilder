@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>About Us - AB Builders</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AB Builders - Premium Construction and Engineering Solutions">
+    <meta name="keywords" content="AB Builders, Construction, Engineering, Architecture">
+    <meta name="author" content="AB Builders">
+
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="css/animations.css" type="text/css">
+    <link rel="icon" type="image/png/icon" href="images/favicon.png" alt="AB Builders Icon">
+
+    <style>
+        * {
+            box-sizing: border-box !important;
+        }
+
+        html, body {
+            background: #0a0e27 !important;
+            color: #ccc !important;
+        }
+
+        /* Hero Section */
+        .about-hero {
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f2e 100%) !important;
+            padding: 100px 20px !important;
+            text-align: center !important;
+            color: white !important;
+            min-height: 400px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+
+        .about-hero h1 {
+            font-size: 3.5em !important;
+            font-weight: 900 !important;
+            color: #ff6b35 !important;
+            margin-bottom: 20px !important;
+            text-align: center !important;
+        }
+
+        .about-hero p {
+            font-size: 1.3em !important;
+            color: #ccc !important;
+            max-width: 700px !important;
+            margin: 0 auto !important;
+            text-align: center !important;
+        }
+
+        /* Main Content */
+        .about-content {
+            padding: 80px 20px !important;
+            background: #0a0e27 !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            color: #ccc !important;
+        }
+
+        .about-section {
+            max-width: 1200px !important;
+            margin: 0 auto 80px !important;
+            display: block !important;
+            visibility: visible !important;
+        }
+
+        .about-title {
+            font-size: 2.5em !important;
+            color: #ff6b35 !important;
+            margin-bottom: 30px !important;
+            font-weight: 700 !important;
+            text-align: center !important;
+            position: relative !important;
+            padding-bottom: 20px !important;
+        }
+
+        .about-title:after {
+            content: '' !important;
+            position: absolute !important;
+            bottom: 0 !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            width: 100px !important;
+            height: 3px !important;
+            background: linear-gradient(90deg, #ff6b35, #f7931e) !important;
+        }
+
+        .about-description {
+            font-size: 1.1em !important;
+            color: #ccc !important;
+            line-height: 1.9 !important;
+            max-width: 900px !important;
+            margin: 0 auto 50px !important;
+            text-align: center !important;
+        }
+
+        .values-grid {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+            gap: 30px !important;
+            margin-top: 40px !important;
+        }
+
+        .value-card {
+            background: rgba(255, 107, 53, 0.1) !important;
+            border: 2px solid #ff6b35 !important;
+            padding: 40px 30px !important;
+            border-radius: 12px !important;
+            text-align: center !important;
+            transition: all 0.3s ease !important;
+            display: block !important;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px) !important;
+            background: rgba(255, 107, 53, 0.15) !important;
+            box-shadow: 0 20px 50px rgba(255, 107, 53, 0.2) !important;
+        }
+
+        .value-icon {
+            font-size: 3em !important;
+            color: #f7931e !important;
+            margin-bottom: 20px !important;
+        }
+
+        .value-title {
+            font-size: 1.4em !important;
+            color: white !important;
+            margin-bottom: 15px !important;
+            font-weight: 700 !important;
+        }
+
+        .value-text {
+            color: #aaa !important;
+            line-height: 1.6 !important;
+            font-size: 0.95em !important;
+        }
+
+        .stats-grid {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+            gap: 40px !important;
+            margin-top: 50px !important;
+        }
+
+        .stat-item {
+            text-align: center !important;
+        }
+
+        .stat-number {
+            font-size: 3em !important;
+            font-weight: 900 !important;
+            color: #ff6b35 !important;
+            margin-bottom: 10px !important;
+        }
+
+        .stat-label {
+            font-size: 1.1em !important;
+            color: #ccc !important;
+            font-weight: 600 !important;
+        }
+
+        .cta-section {
+            background: linear-gradient(90deg, #ff6b35, #f7931e) !important;
+            padding: 60px 40px !important;
+            border-radius: 12px !important;
+            text-align: center !important;
+            margin-top: 80px !important;
+        }
+
+        .cta-section h3 {
+            font-size: 2em !important;
+            color: white !important;
+            margin-bottom: 20px !important;
+        }
+
+        .cta-section p {
+            color: white !important;
+            font-size: 1.1em !important;
+        }
+
+        .cta-button {
+            display: inline-block !important;
+            padding: 15px 50px !important;
+            background: white !important;
+            color: #ff6b35 !important;
+            text-decoration: none !important;
+            border-radius: 50px !important;
+            font-weight: 700 !important;
+            transition: all 0.3s ease !important;
+            margin-top: 15px !important;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05) !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+        }
+
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 2.2em !important;
+            }
+
+            .about-hero p {
+                font-size: 1em !important;
+            }
+
+            .about-content {
+                padding: 60px 15px !important;
+            }
+
+            .about-title {
+                font-size: 1.8em !important;
+            }
+
+            .value-card {
+                padding: 30px 20px !important;
+            }
+
+            .cta-section {
+                padding: 40px 20px !important;
+            }
+
+            .cta-section h3 {
+                font-size: 1.5em !important;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .about-hero h1 {
+                font-size: 1.8em !important;
+            }
+
+            .about-hero p {
+                font-size: 0.95em !important;
+            }
+
+            .about-content {
+                padding: 50px 12px !important;
+            }
+
+            .about-title {
+                font-size: 1.5em !important;
+            }
+
+            .stat-number {
+                font-size: 2.2em !important;
+            }
+
+            .value-title {
+                font-size: 1.1em !important;
+            }
+
+            .cta-section {
+                padding: 30px 15px !important;
+            }
+
+            .cta-section h3 {
+                font-size: 1.3em !important;
+            }
+
+            .cta-button {
+                padding: 12px 40px !important;
+                font-size: 0.9em !important;
+            }
+        }
+
+        /* Navbar Styling */
+        header {
+            width: 100% !important;
+            position: relative !important;
+            background: #0a0e27 !important;
+            z-index: 999 !important;
+            padding: 0 !important;
+        }
+
+        header .info {
+            background: rgba(0, 0, 0, 0.3) !important;
+            padding: 10px 0 !important;
+            border-bottom: 1px solid rgba(255, 107, 53, 0.2) !important;
+        }
+
+        header .info .col {
+            display: inline-block !important;
+            font-size: 12px !important;
+            color: #ccc !important;
+            padding-right: 30px !important;
+        }
+
+        header .info .col a {
+            color: #ff6b35 !important;
+            text-decoration: none !important;
+        }
+
+        header .info .col i {
+            color: #ff6b35 !important;
+            margin-right: 8px !important;
+        }
+
+        header .info .social i {
+            color: #ff6b35 !important;
+            font-size: 18px !important;
+            padding: 0 10px !important;
+        }
+
+        #logo {
+            display: inline-block !important;
+            height: 80px !important;
+            float: left !important;
+            line-height: 80px !important;
+        }
+
+        #logo h2 {
+            margin: 0 !important;
+            padding: 20px 0 !important;
+            color: #ff6b35 !important;
+        }
+
+        #logo p {
+            margin: 0 !important;
+            color: #f7931e !important;
+        }
+
+        nav {
+            float: right !important;
+            display: inline-block !important;
+            height: 80px !important;
+        }
+
+        #mainmenu {
+            margin: 0 !important;
+            padding: 0 !important;
+            list-style: none !important;
+            float: right !important;
+            display: flex !important;
+            height: 80px !important;
+            align-items: center !important;
+        }
+
+        #mainmenu li {
+            display: inline-block !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            float: left !important;
+            position: relative !important;
+        }
+
+        #mainmenu a {
+            display: inline-block !important;
+            padding: 0 20px !important;
+            line-height: 80px !important;
+            color: #ccc !important;
+            text-decoration: none !important;
+            font-size: 13px !important;
+            transition: all 0.3s ease !important;
+        }
+
+        #mainmenu li a:after {
+            content: none !important;
+        }
+
+        #mainmenu a:hover {
+            color: #ff6b35 !important;
+            background: rgba(255, 107, 53, 0.1) !important;
+        }
+
+        #mainmenu li:last-child a {
+            padding-right: 0 !important;
+        }
+
+        header .container {
+            padding: 0 20px !important;
+        }
+
+        header .row {
+            align-items: center !important;
+            min-height: 80px !important;
+        }
+
+        #menu-btn {
+            display: none !important;
+            background: transparent !important;
+            border: none !important;
+            cursor: pointer !important;
+            position: relative !important;
+            z-index: 2000 !important;
+        }
+
+        /* Mobile Menu Button */
+        @media (max-width: 992px) {
+            #menu-btn {
+                display: block !important;
+                float: right !important;
+                width: 50px !important;
+                height: 50px !important;
+                background: transparent !important;
+                border: none !important;
+                margin-top: 15px !important;
+                cursor: pointer !important;
+                z-index: 2000 !important;
+                padding: 0 !important;
+                outline: none !important;
+            }
+
+            #menu-btn:before {
+                font-family: FontAwesome !important;
+                content: "\f0c9" !important;
+                font-size: 28px !important;
+                color: #ff6b35 !important;
+                display: block !important;
+                line-height: 50px !important;
+                text-align: center !important;
+            }
+
+            nav {
+                width: 100% !important;
+                float: none !important;
+                clear: both !important;
+                display: none !important;
+                height: auto !important;
+            }
+
+            nav.menu-open {
+                display: block !important;
+            }
+
+            #mainmenu {
+                display: block !important;
+                flex-direction: column !important;
+                height: auto !important;
+                background: #0a0e27 !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            #mainmenu li {
+                display: block !important;
+                width: 100% !important;
+                border-bottom: 1px solid rgba(255, 107, 53, 0.2) !important;
+                margin: 0 !important;
+            }
+
+            #mainmenu a {
+                padding: 15px 20px !important;
+                line-height: normal !important;
+                display: block !important;
+            }
+
+            header {
+                position: relative !important;
+            }
+        }
+
+        /* Desktop view */
+        @media (min-width: 993px) {
+            header .info {
+                display: block !important;
+            }
+
+            nav {
+                display: block !important;
+            }
+
+            #menu-btn {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-hero {
+                padding: 60px 15px !important;
+                min-height: 300px !important;
+            }
+
+            .about-hero h1 {
+                font-size: 1.5em !important;
+            }
+
+            .about-hero p {
+                font-size: 0.85em !important;
+            }
+
+            .about-content {
+                padding: 40px 10px !important;
+            }
+
+            .about-title {
+                font-size: 1.3em !important;
+            }
+
+            .about-description {
+                font-size: 0.95em !important;
+            }
+
+            .stat-number {
+                font-size: 1.8em !important;
+            }
+
+            .stat-label {
+                font-size: 0.9em !important;
+            }
+
+            .cta-section {
+                padding: 25px 12px !important;
+            }
+
+            .cta-section h3 {
+                font-size: 1.1em !important;
+            }
+
+            .cta-button {
+                padding: 10px 30px !important;
+                font-size: 0.85em !important;
+            }
+        }
+
+        /* Touch-friendly buttons */
+        @media (hover: none) {
+            button:hover, .btn:hover, input[type="submit"]:hover {
+                transform: none !important;
+            }
+
+            .card:hover, .about-card:hover {
+                transform: none !important;
+            }
+        }
+
+        /* High DPI screens */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            body {
+                -webkit-font-smoothing: antialiased !important;
+                -moz-osx-font-smoothing: grayscale !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- header begin -->
+        <header>
+            <div class="info">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="col"><span class="id-color"><i class="fa fa-map-marker"></i></span>Talli Bamori, Mukhani, Haldwani, Uttarakhand 263139</div>
+                            <div class="col"><span class="id-color"><i class="fa fa-clock-o"></i></span>Monday - Friday 08:00-16:00</div>
+                            <div class="col"><span class="id-color"><i class="fa fa-phone"></i></span><a id="link" href="tel:+919719402631">+91 9719402631</a></div>
+                            <div class="col">
+                                <div id="lang-selector" class="dropdown">
+                                    <a href="#" class="btn-selector">English</a>
+                                    <ul>
+                                        <li class="active"><a href="#">English</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-right">
+                            <div class="col social">
+                                <a href="https://wa.me/+918630889787"><i class="fa fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="logo">
+                            <a href="index.html" class="gradient-text">
+                                <h2 style="font-size: 28px; font-weight: 900; margin: 0; color: #ff6b35; letter-spacing: 4px;">A.B. BUILDERS</h2>
+                                <p style="font-size: 12px; margin: 0; letter-spacing: 2px; color: #f7931e;">PREMIUM CONSTRUCTION SOLUTIONS</p>
+                            </a>
+                        </div>
+
+                        <div id="menu-btn"></div>
+
+                        <nav>
+                            <ul id="mainmenu">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>About AB Builders</h1>
+                        <p>Building Dreams with Excellence, Innovation, and Dedication to Quality</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content -->
+        <div id="content" class="no-bottom no-top">
+            <section class="about-content">
+                <!-- Who We Are -->
+                <div class="about-section">
+                    <h2 class="about-title">Who We Are</h2>
+                    <p class="about-description">
+                        AB Builders is a premier construction and engineering firm dedicated to transforming visions into reality. With years of expertise in architecture, civil engineering, structural design, and premium construction, we deliver exceptional projects that exceed expectations. Our commitment to excellence, innovation, and client satisfaction sets us apart in the industry.
+                    </p>
+                </div>
+
+                <!-- Core Values -->
+                <div class="about-section">
+                    <h2 class="about-title">Our Values</h2>
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <div class="value-icon">🏗️</div>
+                            <div class="value-title">Quality</div>
+                            <p class="value-text">We maintain the highest standards of quality in every project, ensuring durability and excellence in craftsmanship.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">🤝</div>
+                            <div class="value-title">Integrity</div>
+                            <p class="value-text">Transparency and honesty guide all our dealings. We build lasting relationships based on trust and reliability.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">💡</div>
+                            <div class="value-title">Innovation</div>
+                            <p class="value-text">We embrace modern technologies and innovative solutions to deliver cutting-edge construction projects.</p>
+                        </div>
+                    </div>
+
+                    <!-- Statistics -->
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Client Satisfaction</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Expert Team Members</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Why Choose Us -->
+                <div class="about-section">
+                    <h2 class="about-title">Why Choose AB Builders</h2>
+                    <p class="about-description">
+                        With a track record of excellence spanning over 15 years, AB Builders combines technical expertise with creative problem-solving. Our team of dedicated professionals brings together diverse skills in architecture, engineering, project management, and construction to deliver outstanding results on every project. We prioritize your vision, budget, and timeline while maintaining our commitment to quality and sustainability.
+                    </p>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="about-section">
+                    <div class="cta-section">
+                        <h3>Ready to Build Your Dream?</h3>
+                        <p>Let's discuss your project and turn your vision into reality</p>
+                        <a href="contact.html" class="cta-button">Get In Touch</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <br>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h3>Quick Links</h3>
+                        <ul style="color: #ccc;">
+                            <li><a href="index.html" style="color: #ccc; text-decoration: none;">Home</a></li>
+                            <li><a href="projects.html" style="color: #ccc; text-decoration: none;">Projects</a></li>
+                            <li><a href="services.html" style="color: #ccc; text-decoration: none;">Services</a></li>
+                            <li><a href="contact.html" style="color: #ccc; text-decoration: none;">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h3>Contact Us</h3>
+                        <div class="widget widget-address">
+                            <address style="color: #ccc;">
+                                <span>Premium Construction & Engineering Services</span>
+                                <span><strong>Phone:</strong> +91 9719402631 | +91 8630889787</span>
+                                <span><strong>Email:</strong> <a href="mailto:info@abbuilders.com" style="color: #ff6b35; text-decoration: none;">info@abbuilders.com</a></span>
+                                <span><strong>Website:</strong> <a href="https://www.abbuilders.com" style="color: #ff6b35; text-decoration: none;">https://www.abbuilders.com</a></span>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subfooter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            &copy; All Rights Reserved. Copyright AB Builders 2024 | Premium Construction Solutions
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <div class="social-icons">
+                                <a href="https://wa.me/+918630889787"><i class="fa fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <a href="#" id="back-to-top"></a>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jpreLoader.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/enquire.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/designesia.js"></script>
+    <script>
+        // Mobile Menu Toggle with jQuery
+        $(document).ready(function() {
+            console.log('Menu setup starting...');
+            
+            var menuBtn = $('#menu-btn');
+            var nav = $('nav');
+            var menuLinks = $('#mainmenu a');
+            
+            console.log('Menu button found:', menuBtn.length);
+            console.log('Nav found:', nav.length);
+            console.log('Menu links found:', menuLinks.length);
+
+            // Menu button click handler
+            menuBtn.on('click', function(e) {
+                console.log('Menu button clicked!');
+                e.preventDefault();
+                e.stopPropagation();
+                nav.toggleClass('menu-open');
+                console.log('Menu open:', nav.hasClass('menu-open'));
+            });
+
+            // Close menu when clicking on a link
+            menuLinks.on('click', function(e) {
+                console.log('Menu link clicked');
+                nav.removeClass('menu-open');
+            });
+
+            // Close menu when clicking outside
+            $(document).on('click', function(event) {
+                if (!$(event.target).closest('nav').length && 
+                    !$(event.target).closest('#menu-btn').length) {
+                    nav.removeClass('menu-open');
+                }
+            });
+
+            // Prevent menu from closing when clicking inside nav
+            nav.on('click', function(e) {
+                e.stopPropagation();
+            });
+            
+            console.log('Menu setup complete!');
+        });
+    </script>
+
+</body>
+
+</html>

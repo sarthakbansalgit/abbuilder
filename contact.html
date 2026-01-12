@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact Us - AB Builders</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AB Builders - Contact Us for Premium Construction Services">
+    <meta name="keywords" content="AB Builders, Construction, Contact, Engineering">
+    <meta name="author" content="AB Builders">
+
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="css/animations.css" type="text/css">
+    <link rel="icon" type="image/png/icon" href="images/favicon.png" alt="AB Builders Icon">
+
+    <style>
+        * {
+            box-sizing: border-box !important;
+        }
+
+        html, body {
+            background: #0a0e27 !important;
+            color: #ccc !important;
+            font-family: Arial, sans-serif !important;
+        }
+
+        /* Navbar Styling */
+        header {
+            width: 100% !important;
+            position: relative !important;
+            background: #0a0e27 !important;
+            z-index: 999 !important;
+            padding: 0 !important;
+        }
+
+        header .info {
+            background: rgba(0, 0, 0, 0.3) !important;
+            padding: 10px 0 !important;
+            border-bottom: 1px solid rgba(255, 107, 53, 0.2) !important;
+        }
+
+        header .info .col {
+            display: inline-block !important;
+            font-size: 12px !important;
+            color: #ccc !important;
+            padding-right: 30px !important;
+        }
+
+        header .info .col a {
+            color: #ff6b35 !important;
+            text-decoration: none !important;
+        }
+
+        header .info .col i {
+            color: #ff6b35 !important;
+            margin-right: 8px !important;
+        }
+
+        header .info .social i {
+            color: #ff6b35 !important;
+            font-size: 18px !important;
+            padding: 0 10px !important;
+        }
+
+        /* Language Selector Hide */
+        #lang-selector {
+            display: none !important;
+        }
+
+        header .info .social {
+            display: inline-block !important;
+        }
+
+        header .info .social a {
+            color: #ff6b35 !important;
+            text-decoration: none !important;
+            transition: all 0.3s ease !important;
+            margin: 0 5px !important;
+        }
+
+        header .info .social a:hover {
+            color: #f7931e !important;
+        }
+
+        #logo {
+            display: inline-block !important;
+            height: 80px !important;
+            float: left !important;
+            line-height: 80px !important;
+        }
+
+        #logo h2 {
+            margin: 0 !important;
+            padding: 20px 0 !important;
+            color: #ff6b35 !important;
+        }
+
+        #logo p {
+            margin: 0 !important;
+            color: #f7931e !important;
+        }
+
+        nav {
+            float: right !important;
+            display: inline-block !important;
+            height: 80px !important;
+        }
+
+        #mainmenu {
+            margin: 0 !important;
+            padding: 0 !important;
+            list-style: none !important;
+            float: right !important;
+            display: flex !important;
+            height: 80px !important;
+            align-items: center !important;
+        }
+
+        #mainmenu li {
+            display: inline-block !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            float: left !important;
+            position: relative !important;
+        }
+
+        #mainmenu a {
+            display: inline-block !important;
+            padding: 0 20px !important;
+            line-height: 80px !important;
+            color: #ccc !important;
+            text-decoration: none !important;
+            font-size: 13px !important;
+            transition: all 0.3s ease !important;
+        }
+
+        #mainmenu li a:after {
+            content: none !important;
+        }
+
+        #mainmenu a:hover {
+            color: #ff6b35 !important;
+            background: rgba(255, 107, 53, 0.1) !important;
+        }
+
+        #mainmenu li:last-child a {
+            padding-right: 0 !important;
+        }
+
+        header .container {
+            padding: 0 20px !important;
+        }
+
+        header .row {
+            align-items: center !important;
+            min-height: 80px !important;
+        }
+
+        #menu-btn {
+            display: none !important;
+            background: transparent !important;
+            border: none !important;
+            cursor: pointer !important;
+            position: relative !important;
+            z-index: 2000 !important;
+        }
+
+        /* Contact Page Styling */
+        .contact-hero {
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f2e 100%) !important;
+            padding: 100px 20px !important;
+            text-align: center !important;
+            color: white !important;
+            min-height: 300px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+
+        .contact-hero h1 {
+            font-size: 3.5em !important;
+            font-weight: 900 !important;
+            color: white !important;
+            margin-bottom: 20px !important;
+            text-align: center !important;
+        }
+
+        .contact-hero p {
+            font-size: 1.2em !important;
+            color: #ccc !important;
+            max-width: 600px !important;
+            margin: 0 auto !important;
+        }
+
+        /* Contact Content */
+        .contact-content {
+            padding: 80px 20px !important;
+            background: #0a0e27 !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            color: #ccc !important;
+        }
+
+        .contact-section {
+            max-width: 1200px !important;
+            margin: 0 auto !important;
+        }
+
+        .contact-form {
+            background: rgba(26, 31, 46, 0.8) !important;
+            border: 1px solid rgba(255, 107, 53, 0.2) !important;
+            padding: 60px 40px !important;
+            border-radius: 12px !important;
+            margin-bottom: 60px !important;
+        }
+
+        .contact-form h2 {
+            font-size: 2.5em !important;
+            color: white !important;
+            margin-bottom: 30px !important;
+            font-weight: 700 !important;
+            text-align: center !important;
+        }
+
+        .form-group {
+            margin-bottom: 20px !important;
+        }
+
+        .form-group label {
+            display: block !important;
+            margin-bottom: 8px !important;
+            color: #ccc !important;
+            font-weight: 600 !important;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100% !important;
+            padding: 12px 15px !important;
+            background: rgba(0, 0, 0, 0.3) !important;
+            border: 1px solid rgba(255, 107, 53, 0.3) !important;
+            color: #ccc !important;
+            border-radius: 6px !important;
+            font-family: Arial, sans-serif !important;
+            font-size: 14px !important;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none !important;
+            background: rgba(0, 0, 0, 0.5) !important;
+            border-color: #ff6b35 !important;
+            box-shadow: 0 0 10px rgba(255, 107, 53, 0.2) !important;
+        }
+
+        .form-group textarea {
+            resize: vertical !important;
+            min-height: 150px !important;
+        }
+
+        .submit-btn {
+            display: inline-block !important;
+            padding: 15px 50px !important;
+            background: linear-gradient(90deg, #ff6b35, #f7931e) !important;
+            color: white !important;
+            text-decoration: none !important;
+            border: none !important;
+            border-radius: 50px !important;
+            font-weight: 700 !important;
+            transition: all 0.3s ease !important;
+            cursor: pointer !important;
+            font-size: 16px !important;
+            width: 100% !important;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px) !important;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4) !important;
+        }
+
+        .contact-info {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+            gap: 40px !important;
+            margin-top: 60px !important;
+        }
+
+        .info-card {
+            background: rgba(26, 31, 46, 0.8) !important;
+            border: 1px solid rgba(255, 107, 53, 0.2) !important;
+            padding: 40px 30px !important;
+            border-radius: 12px !important;
+            text-align: center !important;
+        }
+
+        .info-card i {
+            font-size: 3em !important;
+            color: #ff6b35 !important;
+            margin-bottom: 20px !important;
+            display: block !important;
+        }
+
+        .info-card h3 {
+            font-size: 1.5em !important;
+            color: white !important;
+            margin-bottom: 15px !important;
+            font-weight: 700 !important;
+        }
+
+        .info-card p {
+            color: #aaa !important;
+            line-height: 1.6 !important;
+            margin: 0 !important;
+        }
+
+        .info-card a {
+            color: #ff6b35 !important;
+            text-decoration: none !important;
+        }
+
+        .info-card a:hover {
+            text-decoration: underline !important;
+        }
+
+        /* Map Section */
+        .map-section {
+            margin-top: 80px !important;
+            border-radius: 12px !important;
+            overflow: hidden !important;
+        }
+
+        .map-section iframe {
+            width: 100% !important;
+            height: 400px !important;
+            border: none !important;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            #menu-btn {
+                display: block !important;
+                float: right !important;
+                width: 50px !important;
+                height: 50px !important;
+                background: transparent !important;
+                border: none !important;
+                margin-top: 15px !important;
+                cursor: pointer !important;
+                z-index: 2000 !important;
+                padding: 0 !important;
+                outline: none !important;
+            }
+
+            #menu-btn:before {
+                font-family: FontAwesome !important;
+                content: "\f0c9" !important;
+                font-size: 28px !important;
+                color: #ff6b35 !important;
+                display: block !important;
+                line-height: 50px !important;
+                text-align: center !important;
+            }
+
+            nav {
+                width: 100% !important;
+                float: none !important;
+                clear: both !important;
+                display: none !important;
+                height: auto !important;
+            }
+
+            nav.menu-open {
+                display: block !important;
+            }
+
+            #mainmenu {
+                display: block !important;
+                flex-direction: column !important;
+                height: auto !important;
+                background: #0a0e27 !important;
+            }
+
+            #mainmenu li {
+                display: block !important;
+                width: 100% !important;
+                border-bottom: 1px solid rgba(255, 107, 53, 0.2) !important;
+            }
+
+            #mainmenu a {
+                padding: 15px 20px !important;
+                line-height: normal !important;
+                display: block !important;
+            }
+
+            header {
+                position: relative !important;
+            }
+        }
+
+        @media (min-width: 993px) {
+            header .info {
+                display: block !important;
+            }
+
+            nav {
+                display: block !important;
+            }
+
+            #menu-btn {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-hero h1 {
+                font-size: 2.2em !important;
+            }
+
+            .contact-form {
+                padding: 40px 20px !important;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-hero {
+                padding: 60px 15px !important;
+                min-height: 250px !important;
+            }
+
+            .contact-hero h1 {
+                font-size: 1.8em !important;
+            }
+
+            .contact-form {
+                padding: 30px 15px !important;
+            }
+
+            .contact-form h2 {
+                font-size: 1.8em !important;
+            }
+        }
+
+        #content {
+            background: #0a0e27 !important;
+        }
+
+        footer {
+            background: #0a0e27 !important;
+            border-top: 1px solid rgba(255, 107, 53, 0.2) !important;
+            padding: 60px 20px 20px !important;
+            color: #ccc !important;
+        }
+
+        footer h3 {
+            color: #ff6b35 !important;
+            font-size: 1.3em !important;
+            margin-bottom: 20px !important;
+            font-weight: 700 !important;
+        }
+
+        footer p {
+            color: #ccc !important;
+            line-height: 1.8 !important;
+            margin-bottom: 10px !important;
+        }
+
+        footer a {
+            color: #ff6b35 !important;
+            text-decoration: none !important;
+            transition: all 0.3s ease !important;
+        }
+
+        footer a:hover {
+            color: #f7931e !important;
+            text-decoration: underline !important;
+        }
+
+        .subfooter {
+            background: rgba(0, 0, 0, 0.3) !important;
+            border-top: 1px solid rgba(255, 107, 53, 0.2) !important;
+            padding: 20px !important;
+            text-align: center !important;
+            color: #aaa !important;
+            margin-top: 40px !important;
+        }
+
+        .subfooter a {
+            color: #ff6b35 !important;
+        }
+
+        .subfooter a:hover {
+            color: #f7931e !important;
+        }
+
+        footer .social-icons {
+            display: inline-block !important;
+        }
+
+        footer .social-icons a {
+            display: inline-block !important;
+            margin: 0 10px !important;
+            font-size: 20px !important;
+        }
+
+        /* ========================================
+           ENHANCED MOBILE RESPONSIVENESS
+           ======================================== */
+
+        @media (max-width: 768px) {
+            header .info .col {
+                display: block !important;
+                font-size: 11px !important;
+                padding-right: 10px !important;
+                margin-bottom: 5px !important;
+            }
+
+            header .info {
+                padding: 8px 0 !important;
+            }
+
+            #logo {
+                height: auto !important;
+                line-height: normal !important;
+                float: left !important;
+            }
+
+            #logo h2 {
+                font-size: 20px !important;
+            }
+
+            #logo p {
+                font-size: 10px !important;
+            }
+
+            .contact-content {
+                padding: 40px 15px !important;
+            }
+
+            .contact-form {
+                padding: 30px 15px !important;
+                margin-bottom: 40px !important;
+            }
+
+            .contact-form h2 {
+                font-size: 1.8em !important;
+                margin-bottom: 25px !important;
+            }
+
+            .map-section iframe {
+                height: 300px !important;
+            }
+
+            footer {
+                padding: 40px 15px 15px !important;
+            }
+
+            footer h3 {
+                font-size: 1.1em !important;
+                margin-bottom: 15px !important;
+            }
+
+            footer p {
+                font-size: 13px !important;
+            }
+
+            .subfooter {
+                padding: 15px !important;
+                font-size: 12px !important;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .contact-hero {
+                padding: 50px 15px !important;
+                min-height: 220px !important;
+            }
+
+            .contact-hero h1 {
+                font-size: 1.6em !important;
+                margin-bottom: 15px !important;
+            }
+
+            .contact-hero p {
+                font-size: 1em !important;
+            }
+
+            .contact-form {
+                border-radius: 8px !important;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                padding: 10px 12px !important;
+                font-size: 14px !important;
+            }
+
+            .submit-btn {
+                padding: 12px 30px !important;
+                font-size: 14px !important;
+            }
+
+            .info-card {
+                padding: 30px 20px !important;
+            }
+
+            .info-card i {
+                font-size: 2.5em !important;
+            }
+
+            .info-card h3 {
+                font-size: 1.2em !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            html {
+                font-size: 14px !important;
+            }
+
+            header .info .col {
+                font-size: 10px !important;
+                padding-right: 5px !important;
+                margin-bottom: 3px !important;
+            }
+
+            #mainmenu a {
+                padding: 12px 15px !important;
+                font-size: 12px !important;
+            }
+
+            .contact-hero {
+                padding: 40px 10px !important;
+            }
+
+            .contact-hero h1 {
+                font-size: 1.4em !important;
+            }
+
+            .contact-section {
+                margin: 0 auto !important;
+            }
+
+            .contact-form {
+                padding: 20px 12px !important;
+            }
+
+            .form-group {
+                margin-bottom: 15px !important;
+            }
+
+            .form-group label {
+                font-size: 13px !important;
+            }
+
+            .submit-btn {
+                padding: 10px 25px !important;
+            }
+
+            .info-card {
+                padding: 25px 15px !important;
+                margin-bottom: 20px !important;
+            }
+
+            footer {
+                padding: 30px 10px 10px !important;
+            }
+
+            .subfooter {
+                padding: 12px !important;
+                font-size: 11px !important;
+            }
+        }
+
+        /* Touch-friendly buttons */
+        @media (hover: none) {
+            button:hover, .btn:hover, input[type="submit"]:hover {
+                transform: none !important;
+            }
+
+            .card:hover, .contact-info-card:hover {
+                transform: none !important;
+            }
+        }
+
+        /* High DPI screens */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            body {
+                -webkit-font-smoothing: antialiased !important;
+                -moz-osx-font-smoothing: grayscale !important;
+            }
+        }
+
+        /* ========================================
+           ANIMATION CLASSES
+           ======================================== */
+
+        /* Fade In Animation */
+        .fade-in {
+            animation: fadeIn 0.8s ease-in !important;
+        }
+
+        /* Slide Up Animation */
+        .slide-up {
+            animation: slideUp 0.8s ease-out !important;
+        }
+
+        /* Scale Pop Animation */
+        .pop-in {
+            animation: popIn 0.6s ease-out !important;
+        }
+
+        /* Glow Effect */
+        .glow-hover {
+            transition: all 0.3s ease !important;
+        }
+
+        .glow-hover:hover {
+            text-shadow: 0 0 20px rgba(255, 107, 53, 0.6) !important;
+            transform: scale(1.05) !important;
+        }
+
+        /* Button Pulse */
+        .pulse-btn {
+            animation: buttonPulse 2s infinite !important;
+        }
+
+        /* Form Input Focus Glow */
+        .input-glow:focus {
+            box-shadow: 0 0 15px rgba(255, 107, 53, 0.4) !important;
+            transform: translateY(-2px) !important;
+        }
+
+        /* Card Hover Lift */
+        .card-lift {
+            transition: all 0.3s ease !important;
+        }
+
+        .card-lift:hover {
+            transform: translateY(-8px) !important;
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.2) !important;
+        }
+
+        /* Icon Bounce */
+        .icon-bounce {
+            animation: iconBounce 0.6s ease-out !important;
+        }
+
+        /* Text Shine Effect */
+        .text-shine {
+            color: white !important;
+            background: none !important;
+        }
+
+        /* Define Animations */
+        @keyframes popIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes buttonPulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 10px rgba(255, 107, 53, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 107, 53, 0);
+            }
+        }
+
+        @keyframes iconBounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes textShine {
+            0% {
+                background-position: -200% center;
+            }
+            50% {
+                background-position: 200% center;
+            }
+            100% {
+                background-position: -200% center;
+            }
+        }
+
+        /* Smooth Transitions for All */
+        a, button, input, textarea, .btn, .submit-btn {
+            transition: all 0.3s ease !important;
+        }
+    </style>
+</head>
+
+<body id="homepage">
+
+    <div id="wrapper">
+
+        <!-- header begin -->
+        <header>
+            <div class="info">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="col"><span class="id-color"><i class="fa fa-map-marker"></i></span>Haldwani, Uttarakhand 263139</div>
+                            <div class="col"><span class="id-color"><i class="fa fa-clock-o"></i></span>Monday - Friday 08:00-16:00</div>
+                            <div class="col"><span class="id-color"><i class="fa fa-phone"></i></span><a href="tel:+918630889787" style="color: #ff6b35;">+91 8630-889787</a></div>
+                        </div>
+                        <div class="col-md-4 text-right">
+                            <!-- social icons -->
+                            <div class="social">
+                                <a href="https://wa.me/+918630889787" title="WhatsApp"><i class="fa fa-whatsapp"></i></a>
+                            
+                            </div>
+                            <!-- social icons close -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- logo begin -->
+                        <div id="logo">
+                                                        <a href="index.html" class="gradient-text">
+                                <h2 style="font-size: 28px; font-weight: 900; margin: 0; color: #ff6b35;">AB BUILDERS</h2>
+                                <p style="font-size: 12px; margin: 0; letter-spacing: 2px; color: #f7931e;">PREMIUM CONSTRUCTION</p>
+                            </a>
+                        </div>
+                        <!-- logo close -->
+
+                        <!-- small button begin -->
+                        <div id="menu-btn"></div>
+                        <!-- small button close -->
+
+                        <!-- mainmenu begin -->
+                        <nav>
+                            <ul id="mainmenu">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                    <!-- mainmenu close -->
+
+                </div>
+            </div>
+        </header>
+        <!-- header close -->
+
+        <!-- Hero Section -->
+        <section class="contact-hero fade-in">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-shine">Contact Us</h1>
+                        <p class="slide-up">Get in touch with AB Builders for your construction and engineering needs</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content -->
+        <div id="content" class="no-bottom no-top">
+            <section class="contact-content">
+                <div class="contact-section">
+                    <!-- Contact Form -->
+                    <div class="contact-form card-lift">
+                        <h2 class="text-shine">Send us a Message</h2>
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">Full Name *</label>
+                                        <input type="text" id="name" name="name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email">Email Address *</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="tel" id="phone" name="phone">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="subject">Subject *</label>
+                                        <input type="text" id="subject" name="subject" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn pulse-btn">Send Message</button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <div class="info-card card-lift pop-in">
+                            <i class="fa fa-map-marker icon-bounce"></i>
+                            <h3>Address</h3>
+                            <p>Talli Bamori, Mukhani<br>Haldwani, Uttarakhand 263139<br>India</p>
+                        </div>
+                        <div class="info-card card-lift pop-in">
+                            <i class="fa fa-phone icon-bounce"></i>
+                            <h3>Phone</h3>
+                            <p><a href="tel:+919719402631" class="glow-hover">+91 9719402631</a><br><a href="tel:+918630889787" class="glow-hover">+91 8630889787</a></p>
+                        </div>
+                        <div class="info-card card-lift pop-in">
+                            <i class="fa fa-envelope icon-bounce"></i>
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@abbuilders.com" class="glow-hover">info@abbuilders.com</a></p>
+                        </div>
+                        <div class="info-card card-lift pop-in">
+                            <i class="fa fa-clock-o icon-bounce"></i>
+                            <h3>Hours</h3>
+                            <p>Monday - Friday<br>08:00 AM - 16:00 PM<br>Closed on Weekends</p>
+                        </div>
+                    </div>
+
+                    <!-- Map Section -->
+                    <div class="map-section">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.8523486516597!2d79.52278762346899!3d29.218506171730833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a00b7d0000001!2sHaldwani!5e0!3m2!1sen!2sin!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </section>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form card-lift">
+                        <h2>Send us a Message</h2>
+                        <form id="contactForm">
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- footer begin -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>About AB Builders</h3>
+                        <p>We deliver premium construction solutions with expertise in residential, commercial, and civil projects. Building excellence, one project at a time.</p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h3>Latest News</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="#">New Construction Techniques</a></li>
+                            <li><a href="#">Sustainable Building Practices</a></li>
+                            <li><a href="#">Project Showcase 2025</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h3>Quick Contact</h3>
+                        <p><strong>Phone:</strong> <a href="tel:+918630889787">+91 86308-89787</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:info@abbuilders.com">info@abbuilders.com</a></p>
+                        <p><strong>Address:</strong> Haldwani, Uttarakhand 263139</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subfooter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            &copy; All Rights Reserved. Copyright <strong>AB Builders</strong> 2025 | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <div class="social-icons">
+                                <span>Follow us:</span>
+                                <a href="https://wa.me/+918630889787" title="WhatsApp"><i class="fa fa-whatsapp"></i></a>
+                                <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+                                <a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- footer close -->
+
+        <a href="#" id="back-to-top"></a>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        // Mobile Menu Toggle with jQuery
+        $(document).ready(function() {
+            console.log('Menu setup starting...');
+            
+            var menuBtn = $('#menu-btn');
+            var nav = $('nav');
+            var menuLinks = $('#mainmenu a');
+            
+            console.log('Menu button found:', menuBtn.length);
+            console.log('Nav found:', nav.length);
+            console.log('Menu links found:', menuLinks.length);
+
+            // Menu button click handler
+            menuBtn.on('click', function(e) {
+                console.log('Menu button clicked!');
+                e.preventDefault();
+                e.stopPropagation();
+                nav.toggleClass('menu-open');
+                console.log('Menu open:', nav.hasClass('menu-open'));
+            });
+
+            // Close menu when clicking on a link
+            menuLinks.on('click', function(e) {
+                console.log('Menu link clicked');
+                nav.removeClass('menu-open');
+            });
+
+            // Close menu when clicking outside
+            $(document).on('click', function(event) {
+                if (!$(event.target).closest('nav').length && 
+                    !$(event.target).closest('#menu-btn').length) {
+                    nav.removeClass('menu-open');
+                }
+            });
+
+            // Prevent menu from closing when clicking inside nav
+            nav.on('click', function(e) {
+                e.stopPropagation();
+            });
+            
+            console.log('Menu setup complete!');
+        });
+
+        // Contact Form Handler
+        $(document).ready(function() {
+            $('#contactForm').on('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you! Your message has been sent. We will contact you soon.');
+                this.reset();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

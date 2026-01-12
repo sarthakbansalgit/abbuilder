@@ -1,0 +1,425 @@
+/* ========================================
+   AB BUILDERS - COMPREHENSIVE ANIMATIONS
+   ======================================== */
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide Down Animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scale Up Animation */
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Glow Animation */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(255, 107, 53, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 107, 53, 0.6);
+    }
+}
+
+/* ========================================
+   BUTTON ANIMATIONS
+   ======================================== */
+
+/* All Buttons */
+button, .btn, input[type="button"], input[type="submit"], a.btn {
+    transition: all 0.3s ease !important;
+    position: relative !important;
+}
+
+/* Button Hover Scale */
+button:hover, .btn:hover, input[type="button"]:hover, input[type="submit"]:hover, a.btn:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3) !important;
+}
+
+/* Button Active */
+button:active, .btn:active, input[type="button"]:active, input[type="submit"]:active, a.btn:active {
+    transform: translateY(0) !important;
+}
+
+/* Submit Button Specific */
+input[type="submit"] {
+    background: linear-gradient(135deg, #ff6b35, #f7931e) !important;
+    color: white !important;
+    border: none !important;
+    padding: 12px 40px !important;
+    border-radius: 4px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(135deg, #f7931e, #ff6b35) !important;
+}
+
+/* ========================================
+   TEXT & HEADING ANIMATIONS
+   ======================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    animation: slideUp 0.6s ease-out !important;
+}
+
+p, span, .text {
+    animation: fadeIn 0.8s ease-out !important;
+}
+
+.contact-hero h1 {
+    animation: slideUp 0.7s ease-out !important;
+    animation-delay: 0.1s !important;
+}
+
+.contact-hero p {
+    animation: slideUp 0.7s ease-out !important;
+    animation-delay: 0.2s !important;
+}
+
+/* ========================================
+   FORM INPUT ANIMATIONS
+   ======================================== */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+.form-control {
+    transition: all 0.3s ease !important;
+    border-bottom: 2px solid transparent !important;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+.form-control:focus {
+    outline: none !important;
+    border-color: #ff6b35 !important;
+    box-shadow: 0 0 15px rgba(255, 107, 53, 0.2) !important;
+    background: rgba(255, 107, 53, 0.05) !important;
+    transform: translateY(-2px) !important;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder,
+textarea::placeholder {
+    transition: all 0.3s ease !important;
+    color: #888 !important;
+}
+
+input[type="text"]:focus::placeholder,
+input[type="email"]:focus::placeholder,
+input[type="tel"]:focus::placeholder,
+textarea:focus::placeholder {
+    color: #ff6b35 !important;
+}
+
+/* Form Labels */
+label {
+    transition: all 0.3s ease !important;
+    color: #ccc !important;
+    font-weight: 500 !important;
+}
+
+/* ========================================
+   LINK ANIMATIONS
+   ======================================== */
+
+a {
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #ff6b35 !important;
+}
+
+/* Underline animation on links */
+a:not(.btn):not(#logo a) {
+    position: relative !important;
+}
+
+a:not(.btn):not(#logo a)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: linear-gradient(90deg, #ff6b35, #f7931e);
+    transition: width 0.3s ease !important;
+}
+
+a:not(.btn):not(#logo a):hover::after {
+    width: 100%;
+}
+
+/* ========================================
+   CARD ANIMATIONS
+   ======================================== */
+
+.card, .contact-info-card, .widget {
+    transition: all 0.3s ease !important;
+    animation: slideUp 0.6s ease-out !important;
+}
+
+.card:hover, .contact-info-card:hover, .widget:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 15px 40px rgba(255, 107, 53, 0.2) !important;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s !important; }
+.card:nth-child(2) { animation-delay: 0.2s !important; }
+.card:nth-child(3) { animation-delay: 0.3s !important; }
+.card:nth-child(4) { animation-delay: 0.4s !important; }
+
+/* ========================================
+   ICON ANIMATIONS
+   ======================================== */
+
+i, .fa {
+    transition: all 0.3s ease !important;
+}
+
+.fa-whatsapp:hover,
+.fa-facebook:hover,
+.fa-twitter:hover {
+    transform: scale(1.2) rotate(5deg) !important;
+    color: #ff6b35 !important;
+}
+
+/* Icon pulse on hover */
+a:hover i {
+    animation: pulse 0.6s ease-in-out !important;
+}
+
+/* ========================================
+   MENU ANIMATIONS
+   ======================================== */
+
+#mainmenu li {
+    transition: all 0.3s ease !important;
+}
+
+#mainmenu li a {
+    position: relative !important;
+    transition: all 0.3s ease !important;
+}
+
+#mainmenu li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6b35, #f7931e);
+    transform: translateX(-50%);
+    transition: width 0.3s ease !important;
+}
+
+#mainmenu li a:hover::before {
+    width: 100%;
+}
+
+/* Mobile menu animation */
+nav.menu-open {
+    animation: slideDown 0.3s ease !important;
+}
+
+/* ========================================
+   HEADER/FOOTER ANIMATIONS
+   ======================================== */
+
+header {
+    animation: slideDown 0.5s ease !important;
+}
+
+footer {
+    animation: slideUp 0.5s ease !important;
+}
+
+footer h3 {
+    animation: slideUp 0.6s ease-out !important;
+}
+
+footer p {
+    animation: fadeIn 0.8s ease-out !important;
+}
+
+/* ========================================
+   LOADING/TRANSITION EFFECTS
+   ======================================== */
+
+/* Hero Section */
+.contact-hero {
+    animation: fadeIn 0.8s ease !important;
+}
+
+.contact-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.1), transparent);
+    animation: slideRight 0.8s ease !important;
+}
+
+@keyframes slideRight {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+/* ========================================
+   RESPONSIVE ANIMATIONS (Mobile)
+   ======================================== */
+
+@media (max-width: 768px) {
+    /* Reduce animation intensity on mobile */
+    button, .btn, input[type="button"], input[type="submit"], a.btn {
+        transition: all 0.2s ease !important;
+    }
+
+    button:hover, .btn:hover {
+        transform: translateY(-1px) !important;
+    }
+
+    .card:hover, .contact-info-card:hover {
+        transform: translateY(-4px) !important;
+    }
+
+    /* Disable some animations on smaller screens */
+    a:not(.btn):not(#logo a)::after {
+        display: none !important;
+    }
+
+    #mainmenu li a::before {
+        display: none !important;
+    }
+
+    h1, h2, h3 {
+        animation-duration: 0.4s !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ultra mobile optimizations */
+    .card {
+        animation: none !important;
+    }
+
+    .card:hover {
+        transform: none !important;
+    }
+
+    button:hover, .btn:hover {
+        transform: none !important;
+    }
+
+    /* Faster transitions on small screens */
+    button, .btn, input[type="button"], input[type="submit"], a.btn {
+        transition: all 0.15s ease !important;
+    }
+}
+
+/* ========================================
+   TEXT SELECTION ANIMATION
+   ======================================== */
+
+::selection {
+    background: rgba(255, 107, 53, 0.3) !important;
+    color: #fff !important;
+}
+
+::-moz-selection {
+    background: rgba(255, 107, 53, 0.3) !important;
+    color: #fff !important;
+}
+
+/* ========================================
+   SMOOTH SCROLL
+   ======================================== */
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+/* ========================================
+   TRANSITION FOR ALL CHANGES
+   ======================================== */
+
+* {
+    transition-property: all !important;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Disable transition for animations */
+@keyframes slideUp,
+@keyframes slideDown,
+@keyframes fadeIn,
+@keyframes scaleUp,
+@keyframes pulse,
+@keyframes glow,
+@keyframes slideRight {
+    * {
+        transition: none !important;
+    }
+}
