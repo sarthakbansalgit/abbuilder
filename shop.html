@@ -19,6 +19,10 @@
     <script src="js/ab-builders-init.js"></script>
 
     <style>
+        * {
+            box-sizing: border-box !important;
+        }
+
         html { background: #0a0e27 !important; }
         body {
             display: block !important;
@@ -26,9 +30,258 @@
             background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%) !important;
             min-height: 100vh;
             color: #fff;
+            font-family: Arial, sans-serif !important;
+            overflow-x: hidden !important;
         }
+
+        /* Navbar Styling */
+        header {
+            width: 100% !important;
+            position: relative !important;
+            background: #0a0e27 !important;
+            z-index: 999 !important;
+            padding: 0 !important;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3) !important;
+        }
+
+        header .info {
+            background: rgba(0, 0, 0, 0.3) !important;
+            padding: 10px 0 !important;
+            border-bottom: 1px solid rgba(255, 107, 53, 0.2) !important;
+        }
+
+        header .info .col {
+            display: inline-block !important;
+            font-size: 12px !important;
+            color: #ccc !important;
+            padding-right: 30px !important;
+        }
+
+        header .info .col a {
+            color: #ff6b35 !important;
+            text-decoration: none !important;
+        }
+
+        header .info .col i {
+            color: #ff6b35 !important;
+            margin-right: 8px !important;
+        }
+
+        header .info .social i {
+            color: #ff6b35 !important;
+            font-size: 18px !important;
+            padding: 0 10px !important;
+        }
+
+        .id-color {
+            color: #ff6b35 !important;
+        }
+
+        #logo {
+            display: inline-block !important;
+            height: 80px !important;
+            float: left !important;
+            line-height: 80px !important;
+        }
+
+        #logo h2 {
+            margin: 0 !important;
+            padding: 20px 0 !important;
+            color: #ff6b35 !important;
+            font-size: 28px !important;
+            font-weight: 900 !important;
+        }
+
+        #logo p {
+            margin: 0 !important;
+            color: #f7931e !important;
+            font-size: 12px !important;
+            letter-spacing: 2px !important;
+        }
+
+        nav {
+            float: right !important;
+            display: inline-block !important;
+            height: 80px !important;
+        }
+
+        #mainmenu {
+            margin: 0 !important;
+            padding: 0 !important;
+            list-style: none !important;
+            float: right !important;
+            display: flex !important;
+            height: 80px !important;
+            align-items: center !important;
+        }
+
+        #mainmenu li {
+            display: inline-block !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            float: left !important;
+            position: relative !important;
+        }
+
+        #mainmenu a {
+            display: inline-block !important;
+            padding: 0 20px !important;
+            line-height: 80px !important;
+            color: #ccc !important;
+            text-decoration: none !important;
+            font-size: 13px !important;
+            transition: all 0.3s ease !important;
+        }
+
+        #mainmenu a:hover {
+            color: #ff6b35 !important;
+            background: rgba(255, 107, 53, 0.1) !important;
+        }
+
+        #mainmenu li:last-child a {
+            padding-right: 0 !important;
+        }
+
+        header .container {
+            padding: 0 20px !important;
+        }
+
+        header .row {
+            align-items: center !important;
+            min-height: 80px !important;
+        }
+
+        #menu-btn {
+            display: none !important;
+            background: transparent !important;
+            border: none !important;
+            color: #ff6b35 !important;
+            font-size: 24px !important;
+            cursor: pointer !important;
+            padding: 0 !important;
+            margin-top: 15px !important;
+        }
+
+        footer {
+            background: #0a0e27 !important;
+            border-top: 1px solid rgba(255, 107, 53, 0.2) !important;
+            padding: 60px 20px 20px !important;
+            color: #ccc !important;
+        }
+
+        footer h3 {
+            color: #ff6b35 !important;
+            font-size: 1.3em !important;
+            margin-bottom: 20px !important;
+            font-weight: 700 !important;
+        }
+
+        footer p {
+            color: #ccc !important;
+            line-height: 1.8 !important;
+            margin-bottom: 10px !important;
+        }
+
+        footer a {
+            color: #ff6b35 !important;
+            text-decoration: none !important;
+            transition: all 0.3s ease !important;
+        }
+
+        footer a:hover {
+            color: #f7931e !important;
+            text-decoration: underline !important;
+        }
+
+        .subfooter {
+            background: rgba(0, 0, 0, 0.3) !important;
+            border-top: 1px solid rgba(255, 107, 53, 0.2) !important;
+            padding: 20px !important;
+            text-align: center !important;
+            color: #aaa !important;
+            margin-top: 40px !important;
+        }
+
+        .subfooter a {
+            color: #ff6b35 !important;
+        }
+
+        .subfooter a:hover {
+            color: #f7931e !important;
+        }
+
+        footer .social-icons {
+            text-align: right !important;
+        }
+
+        footer .social-icons a {
+            display: inline-block !important;
+            margin-left: 15px !important;
+            font-size: 18px !important;
+        }
+
+        /* Hide language selector */
+        #lang-selector {
+            display: none !important;
+        }
+
+        @media (max-width: 992px) {
+            #menu-btn {
+                display: block !important;
+            }
+
+            nav {
+                width: 100% !important;
+                float: none !important;
+                clear: both !important;
+                display: none !important;
+                height: auto !important;
+            }
+
+            nav.menu-open {
+                display: block !important;
+            }
+
+            #mainmenu {
+                display: block !important;
+                flex-direction: column !important;
+                height: auto !important;
+                background: #0a0e27 !important;
+            }
+
+            #mainmenu li {
+                display: block !important;
+                width: 100% !important;
+                border-bottom: 1px solid rgba(255, 107, 53, 0.2) !important;
+            }
+
+            #mainmenu a {
+                padding: 15px 20px !important;
+                line-height: normal !important;
+                display: block !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header .info .col {
+                display: block !important;
+                padding-right: 0 !important;
+                margin-bottom: 5px !important;
+            }
+
+            .subfooter .row {
+                display: block !important;
+            }
+
+            footer .social-icons {
+                text-align: center !important;
+                margin-top: 15px !important;
+            }
+        }
+
         #wrapper { display: block !important; }
         .page-shop { background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%); }
+        
         
         .coming-soon-container {
             text-align: center;
@@ -556,22 +809,16 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8">
-                            <div class="col"><span class="id-color"><i class="fa fa-map-marker"></i></span>Talli Bamori, Mukhani, Opp. Khatu Shyam Mandir, Durga Colony, Ward Number 25, Azad Nagar, Heera Nagar, Haldwani, Uttarakhand 263139 </div>
+                            <div class="col"><span class="id-color"><i class="fa fa-map-marker"></i></span>Haldwani, Uttarakhand 263139</div>
                             <div class="col"><span class="id-color"><i class="fa fa-clock-o"></i></span>Monday - Friday 08:00-16:00</div>
-                            <div class="col"><span class="id-color"><i class="fa fa-phone"></i></span><a id="link" href="tel:+91 9719402631">+91 9719402631</a></div>
-                            <div class="col">
-                                <div id="lang-selector" class="dropdown">
-                                    <a href="#" class="btn-selector">English</a>
-                                    <ul>
-                                        <li class="active"><a href="#">English</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <div class="col"><span class="id-color"><i class="fa fa-phone"></i></span><a href="tel:+918630889787" style="color: #ff6b35;">+91 8630-889787</a></div>
                         </div>
                         <div class="col-md-4 text-right">
-                            <div class="col social">
-                                <a href="https://wa.me/+91 8630889787"><i class="fa fa-whatsapp"></i></a>
+                            <!-- social icons -->
+                            <div class="social">
+                                <a href="https://wa.me/+918630889787" title="WhatsApp"><i class="fa fa-whatsapp"></i></a>
                             </div>
+                            <!-- social icons close -->
                         </div>
                     </div>
                 </div>
@@ -580,15 +827,20 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
+                        <!-- logo begin -->
                         <div id="logo">
                             <a href="index.html" class="gradient-text">
-                                <h2 style="font-size: 28px; font-weight: 900; margin: 0; color: #ff6b35; letter-spacing: 4px;">A.B. BUILDERS</h2>
-                                <p style="font-size: 12px; margin: 0; letter-spacing: 2px; color: #f7931e;">PREMIUM CONSTRUCTION SOLUTIONS</p>
+                                <h2 style="font-size: 28px; font-weight: 900; margin: 0; color: #ff6b35;">AB BUILDERS</h2>
+                                <p style="font-size: 12px; margin: 0; letter-spacing: 2px; color: #f7931e;">PREMIUM CONSTRUCTION</p>
                             </a>
                         </div>
+                        <!-- logo close -->
 
+                        <!-- small button begin -->
                         <span id="menu-btn"></span>
+                        <!-- small button close -->
 
+                        <!-- mainmenu begin -->
                         <nav>
                             <ul id="mainmenu">
                                 <li><a href="index.html">Home</a></li>
@@ -599,10 +851,13 @@
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </nav>
+                        <!-- mainmenu close -->
+
                     </div>
                 </div>
             </div>
         </header>
+        <!-- header close -->
 
         <div class="coming-soon-container">
             <div class="coming-soon-content">
@@ -655,29 +910,24 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <br>
+                        <h3>About AB Builders</h3>
+                        <p>We deliver premium construction solutions with expertise in residential, commercial, and civil projects. Building excellence, one project at a time.</p>
                     </div>
 
                     <div class="col-md-4">
-                        <h3>Quick Links</h3>
-                        <ul style="color: #ccc;">
-                            <li><a href="index.html" style="color: #ccc; text-decoration: none;">Home</a></li>
-                            <li><a href="projects.html" style="color: #ccc; text-decoration: none;">Projects</a></li>
-                            <li><a href="services.html" style="color: #ccc; text-decoration: none;">Services</a></li>
-                            <li><a href="contact.html" style="color: #ccc; text-decoration: none;">Contact</a></li>
+                        <h3>Latest News</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="#">New Construction Techniques</a></li>
+                            <li><a href="#">Sustainable Building Practices</a></li>
+                            <li><a href="#">Project Showcase 2025</a></li>
                         </ul>
                     </div>
 
                     <div class="col-md-4">
-                        <h3>Contact Us</h3>
-                        <div class="widget widget-address">
-                            <address style="color: #ccc;">
-                                <span>Premium Construction & Engineering Services</span>
-                                <span><strong>Phone:</strong>+91 9719402631 | +91 8630889787</span>
-                                <span><strong>Email:</strong><a href="mailto:info@abbuilders.com" style="color: #ff6b35; text-decoration: none;">info@abbuilders.com</a></span>
-                                <span><strong>Website:</strong><a href="https://www.abbuilders.com" style="color: #ff6b35; text-decoration: none;">https://www.abbuilders.com</a></span>
-                            </address>
-                        </div>
+                        <h3>Quick Contact</h3>
+                        <p><strong>Phone:</strong> <a href="tel:+918630889787">+91 86308-89787</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:info@abbuilders.com">info@abbuilders.com</a></p>
+                        <p><strong>Address:</strong> Haldwani, Uttarakhand 263139</p>
                     </div>
                 </div>
             </div>
@@ -686,11 +936,14 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
-                            &copy; All Rights Reserved. Copyright AB Builders 2024 | Premium Construction Solutions
+                            &copy; All Rights Reserved. Copyright <strong>AB Builders</strong> 2025 | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
                         </div>
                         <div class="col-md-6 text-right">
                             <div class="social-icons">
-                                <a href="https://wa.me/+91 8630889787"><i class="fa fa-whatsapp"></i></a>
+                                <span>Follow us:</span>
+                                <a href="https://wa.me/+918630889787" title="WhatsApp"><i class="fa fa-whatsapp"></i></a>
+                                <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+                                <a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
                             </div>
                         </div>
                     </div>
@@ -743,6 +996,19 @@
             updateCountdown();
             document.getElementById('emailInput').addEventListener('keypress', function(e) {
                 if (e.key === 'Enter') subscribeNewsletter();
+            });
+
+            // Menu toggle
+            document.getElementById('menu-btn').addEventListener('click', function() {
+                const nav = document.querySelector('nav');
+                nav.classList.toggle('menu-open');
+            });
+
+            // Close menu when link is clicked
+            document.querySelectorAll('#mainmenu a').forEach(link => {
+                link.addEventListener('click', function() {
+                    document.querySelector('nav').classList.remove('menu-open');
+                });
             });
         });
     </script>
